@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>RETIME 自制简单计时器软件</title>
+    <link href="/2022/08/30/RETIME/"/>
+    <url>/2022/08/30/RETIME/</url>
+    
+    <content type="html"><![CDATA[<h1 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h1><p>闲得蛋疼没事做，拿Tkinter捏了个计时器软件，tk简直是我用过最难受的GUI</p><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>老惯例先上张截图</p><p><img src="Snipaste_2022-08-30_04-09-12.png"></p><h2 id="def"><a href="#def" class="headerlink" title="def()"></a>def()</h2><p>没有复杂操作，界面简单，解压缩即可开箱使用</p><p>随意切换浅色、深色主题 （双击计时数值区）</p><p>可以置于顶层以便管理时间</p><p>提供对定时关机的支持，并可随时撤销（请不要把关机倒计时作死设为0）</p><h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><p>还有一些重要的细节先不在这里讲</p><p>更多了解请看程序目录下 HELP.txt </p><p>推荐使用 eXhale 打开（</p><h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h2><p>On Github: <a href="https://github.com/CavDev/RETIME">https://github.com/CavDev/RETIME</a></p><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>On 蓝奏云：<a href="https://akara.lanzoux.com/iLMKy0a4e6te">https://akara.lanzoux.com/iLMKy0a4e6te</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>SOFTS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>RETIME</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>自制纯文本编辑器 eXhale</title>
+    <link href="/2022/08/30/eXhale/"/>
+    <url>/2022/08/30/eXhale/</url>
+    
+    <content type="html"><![CDATA[<h1 id="eXhale-Text"><a href="#eXhale-Text" class="headerlink" title="eXhale.Text"></a>eXhale.Text</h1><p>By NSX7 </p><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="" alt="Snipaste_2022-08-30_03-48-23.png"></p><h2 id="这是一个纯文本编辑器"><a href="#这是一个纯文本编辑器" class="headerlink" title="这是一个纯文本编辑器"></a>这是一个纯文本编辑器</h2><p>也就意味着它不能拿来写富文本或者是Markdown，不过我后期可能会添加对Markdown的支持，当然是不可能实现和typora一样丝滑的</p><h2 id="def"><a href="#def" class="headerlink" title="def()"></a>def()</h2><p>功能简单，支持一些自定义，例如设定背景图或是调整字间距，自定义字体和错误提醒之类的</p><p>开箱即用，无需安装程序（但需要.NET 6.0的依赖库）</p><p><a href="https://dotnet.microsoft.com/zh-cn/download/dotnet/thank-you/runtime-desktop-6.0.8-windows-x64-installer">https://dotnet.microsoft.com/zh-cn/download/dotnet/thank-you/runtime-desktop-6.0.8-windows-x64-installer</a></p><p>wpf特色，显卡渲染保证性能，但是核显低U可能就不大乐观</p><p>（自定义选项界面预览）</p><p><img src="" alt="Snipaste_2022-08-30_03-46-57.png"></p><h1 id="版本（加粗为最新版）"><a href="#版本（加粗为最新版）" class="headerlink" title="版本（加粗为最新版）"></a>版本（加粗为最新版）</h1><p>最新1.30版 On 蓝奏云 <a href="https://akara.lanzoux.com/ixDpD0aj81wb">https://akara.lanzoux.com/ixDpD0aj81wb</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>SOFTS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>eXhale</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo预定义参数</title>
     <link href="/2022/06/29/Hexo%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8F%82%E6%95%B0/"/>
     <url>/2022/06/29/Hexo%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8F%82%E6%95%B0/</url>
@@ -21,50 +71,6 @@
     <tags>
       
       <tag>MarkDown</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>2022年暑假目标</title>
-    <link href="/2022/06/29/2022%E5%B9%B4%E6%9A%91%E5%81%87%E7%9B%AE%E6%A0%87/"/>
-    <url>/2022/06/29/2022%E5%B9%B4%E6%9A%91%E5%81%87%E7%9B%AE%E6%A0%87/</url>
-    
-    <content type="html"><![CDATA[<h1 id="2022年暑假目标"><a href="#2022年暑假目标" class="headerlink" title="2022年暑假目标"></a>2022年暑假目标</h1><p>不知不觉又在这SB学校<strong>混</strong>了一学期。</p><p>今年暑假，我把我的名字改成了“<strong>逆属玄</strong>”。</p><p>这个名字有点怪，但是我实际上希望它的意义是“<strong>逆风局更多属于玄学成分</strong>”。</p><p>希望它能来激励自己。</p><p>今年的几件事压得我喘不过气来，我愈发感觉我变成熟了，但又能感觉到我的迷茫。</p><p>身边的Homie来了又走，<strong>感觉身边没一个人真的懂我</strong>。</p><p>喜欢的女孩子和其他人在一起了，我当<strong>小丑</strong>的事全班还都知道。</p><p>生地考试好不容易熬过去了，现在又得迎接中考的压力。</p><p>暑假玩一个月<strong>傻逼学校</strong>又要非法补课，还得交两千。</p><p>真想给她妈逼干透，这傻逼地方。</p><p>中国的人口就不能鸡巴少点吗，<strong>操你妈</strong>。</p><p>好好想想暑假该干嘛吧，反正也没啥意思。</p><hr><h3 id="CODE"><a href="#CODE" class="headerlink" title="CODE"></a>CODE</h3><ol><li>  学习C语言 EasyX</li><li>  精通Python高级编程 </li><li>  用Pygame做一个有意思的游戏</li><li>  精通C#高级编程</li><li>  多刷点算法题</li><li>  深入WPF</li><li>  学习RUST</li><li>  精通前端 学习Vue.js</li><li>  多做几个DEMO和项目</li><li>  改良自己的博客</li><li>  入门网络攻防</li></ol><p>希望自己学习时能更有耐心 虚心求教.</p><hr><h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><ol><li>  把傻逼数学成绩提上去</li><li>  把傻逼物理成绩提上去</li><li>  BE HUMBLE.</li></ol><p>不知道为什么 我理科成绩一直不太好 可能是因为我更习惯用右脑思考吧</p><hr><h3 id="杂类"><a href="#杂类" class="headerlink" title="杂类"></a>杂类</h3><ol><li>  过得开心点</li><li>  能多听点<strong>HipHop</strong></li><li>  <strong>头发留长点</strong></li><li>  别无精打采</li><li>  别无所事事</li><li>  别像个NT一样</li><li>  别太在意任何人 包括自己</li></ol><p>知道我博客可能没多少人看 就写着玩吧</p><p>重在情绪</p><p><em><strong><u>Fuck Everything.</u></strong></em></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Life</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Me</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>简洁的文本编辑器eXhale</title>
-    <link href="/2022/05/05/%E7%AE%80%E6%B4%81%E7%9A%84%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-eXhale-1-5-PLUS%E5%8F%91%E5%B8%83/"/>
-    <url>/2022/05/05/%E7%AE%80%E6%B4%81%E7%9A%84%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-eXhale-1-5-PLUS%E5%8F%91%E5%B8%83/</url>
-    
-    <content type="html"><![CDATA[<h1 id="简洁的文本编辑器-eXhale"><a href="#简洁的文本编辑器-eXhale" class="headerlink" title="简洁的文本编辑器 eXhale"></a>简洁的文本编辑器 eXhale</h1><p><img src="/img/eXhale1.26.png" alt="预览"></p><p>这是我自己构思制作的文本编辑器eXhale Editor。</p><hr><p><strong>特点</strong>：</p><p>为了小和简单而创造，体积仅136KB（需安装 .NET 6.0 Desktop Runtime）</p><p>支持自定义样式</p><p>逻辑简单易于上手</p><p>界面UI简洁</p><hr><p><strong>缺点</strong>：</p><p>功能较少</p><p>使用体验欠缺，需优化</p><hr><p>欢迎使用：</p><p>蓝奏云：<a href="https://akara.lanzoux.com/i6lYN0742cub">https://akara.lanzoux.com/i6lYN0742cub</a> ( 最新版本 1.26 )</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>软件</tag>
       
     </tags>
     
