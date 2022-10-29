@@ -49,10 +49,10 @@ button:hover{
     background: #ffffff;
     box-shadow:  20px 20px 62px #d2d2d2,
                 -20px -20px 62px #ffffff;
-    height: 85%;
-    width: 55.75%;
-    margin: 3%;
-    padding: 32.25px;
+    height: 80%;
+    width: 55%;
+    margin: 0%;
+    padding: 32.2520px;
 }
 
 .text_Div{
