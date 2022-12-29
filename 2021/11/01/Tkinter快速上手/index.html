@@ -14,21 +14,21 @@
   
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
-  <meta name="theme-color" content="#d9d9d9">
-  <meta name="author" content="NsX7">
+  <meta name="theme-color" content="#ff0b4e">
+  <meta name="author" content="sukuw0">
   <meta name="keywords" content="">
   
     <meta name="description" content="Tkinter 是 Python 内置的标准 GUI 库，可以运行在绝大多数的操作系统上（如Windows, Mac, Linux, Unix）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tkinter 快速上手">
 <meta property="og:url" content="http://example.com/2021/11/01/Tkinter%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/index.html">
-<meta property="og:site_name" content="NsX7&#39;s BLOG">
+<meta property="og:site_name" content="sukuw0 的博客">
 <meta property="og:description" content="Tkinter 是 Python 内置的标准 GUI 库，可以运行在绝大多数的操作系统上（如Windows, Mac, Linux, Unix）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/post_img/pythonDevelop.png">
 <meta property="article:published_time" content="2021-11-01T15:17:58.000Z">
 <meta property="article:modified_time" content="2022-10-29T19:27:48.629Z">
-<meta property="article:author" content="NsX7">
+<meta property="article:author" content="sukuw0">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/post_img/pythonDevelop.png">
@@ -37,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Tkinter 快速上手 - NsX7&#39;s BLOG</title>
+  <title>Tkinter 快速上手 - sukuw0 的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -69,6 +69,10 @@
     <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
+
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 
 
 
@@ -116,7 +120,8 @@
 
 
   
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="sukuw0 的博客" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -129,7 +134,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>NsX7</strong>
+      <strong>sukuw0</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -207,6 +212,18 @@
           
           
             <li class="nav-item">
+              <a class="nav-link" href="/PlayMusics/">
+                <i class="iconfont icon-music"></i>
+                音乐
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 关于
@@ -252,7 +269,7 @@
     
       <span class="post-meta mr-2">
         <i class="iconfont icon-author" aria-hidden="true"></i>
-        NsX7
+        sukuw0
       </span>
     
     
@@ -478,7 +495,7 @@
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>NsX7</div>
+          <div>sukuw0</div>
         </div>
       
       
@@ -523,12 +540,6 @@
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2021/10/30/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
@@ -605,6 +616,12 @@
   
 
 
+  
+  
+
+
+
+
 
 
 
@@ -651,7 +668,7 @@
     <div class="footer-content">
        <style> .Link-text { color: #2196f3; }
 .Link-text:hover{ color: #1e88e5 }
-#Me span { background-image: linear-gradient(135deg,#f54ea2,#ff7676); -webkit-background-clip: text; color: transparent; } </style> <b><p id="Me">© 2022 <span>NsX7</span> </p></b> <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/" class="Link-text">Hexo</a> and Theme by <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid" class="Link-text">Fluid</a></p> 
+#Me span { background-image: linear-gradient(135deg,#f54ea2,#ff7676); -webkit-background-clip: text; color: transparent; } </style> <b><p id="Me">© 2022 <span>sukuw0</span> </p></b> <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/" class="Link-text">Hexo</a> and Theme by <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid" class="Link-text">Fluid</a></p> 
     </div>
   
   
@@ -796,11 +813,50 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+      </script>
+    
+
+  <script  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" ></script>
+
   <script  src="/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script>
 
 
 
