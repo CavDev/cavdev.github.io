@@ -4,50 +4,6 @@
   
   
   <entry>
-    <title>Win10 无痛实现绕限制升级 Win11 22H2</title>
-    <link href="/2022/12/29/win10updatewin11-21h2/"/>
-    <url>/2022/12/29/win10updatewin11-21h2/</url>
-    
-    <content type="html"><![CDATA[<h1 id="win10-无痛实现绕限制升级win11-22H2"><a href="#win10-无痛实现绕限制升级win11-22H2" class="headerlink" title="win10 无痛实现绕限制升级win11 22H2"></a>win10 无痛实现绕限制升级win11 22H2</h1><p>就在最近，我终于给我的设备升级了win11</p><p>网上铺天盖地基本都在攻击win11，我的设备升级后没网上说的出什么问题，就玩漫威蜘蛛侠时爆显存蓝屏了一一回，那时我有个写的笔记还没保存，这之后我基本就没怎么玩过它了。。</p><p>其实我的设备本来是不支持升级win11的，硬盘格式是mbr，因此没 Secure boot 也不能uefi，也没tpm 2.0</p><p>在升win11后，本来想玩个瓦试试的，结果反作弊给我弹出来说我win11没配备tpm2.0，好家伙，我严重怀疑拳头和微软有什么联系</p><p>其实在 <strong>22H2</strong> 版win11镜像上已经很难绕过微软限制了，不管是断网删文件还是什么基本都绕不过检测，绕过了也会提醒你设备不达标，不提供支持</p><p>我基本找遍了网上的教程，最后发现还是github上一个叫<a href="https://github.com/AveYo/">AveYo</a>的大佬牛逼，通过bat脚本实现了绕过win11检测</p><p>进入 <a href="https://github.com/AveYo/MediaCreationTool.bat/tree/main/bypass11">https://github.com/AveYo/MediaCreationTool.bat/tree/main/bypass11</a> 下载 Skip_TPM_Check_on_Dynamic_Update.cmd</p><p>运行脚本就好了，最好在之前先把杀毒软件关闭避免误报，运行之后再打开从官网下载的镜像文件（setup.exe）就可以按正常流程安装，升级会保留你之前安装的软件，不要管镜像内显示的系统，我显示的是 windows servers，按正常流程安装就好</p><p>最后建议安装 explorer patcher，可以在win11上使用10的磁贴菜单，并且磁贴和10之前设置的保持一致</p><p><img src="/2022/12/29/win10updatewin11-21h2/1.png"></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>教程</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>自制的计时器软件 Reload-Timer</title>
-    <link href="/2022/08/30/Reload-Timer/"/>
-    <url>/2022/08/30/Reload-Timer/</url>
-    
-    <content type="html"><![CDATA[<h1 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h1><p>闲得蛋疼没事做，拿Tkinter捏了个计时器软件，tk简直是我用过最难受的GUI</p><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="/2022/08/30/Reload-Timer/windows-light.png"></p><p>Run in Windows 11, Light Mode</p><p><img src="/2022/08/30/Reload-Timer/windows-dark.png"></p><p>Run in Windows 11 , Dark Mode</p><p><img src="/2022/08/30/Reload-Timer/fedora_light.png"></p><p>Run in Fedora 36, Light Mode</p><p><img src="/2022/08/30/Reload-Timer/settings.png"></p><h2 id="define"><a href="#define" class="headerlink" title="define"></a>define</h2><p>没有复杂操作，界面简单，解压缩即可开箱使用</p><p>随意切换浅色、深色主题 （双击计时数值区）</p><p>可以置于顶层以便管理时间</p><p>提供对定时关机的支持，并可随时撤销（请不要把关机倒计时作死设为0）</p><p>提供软件设置</p><h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><p>更多了解请看程序目录下的帮助文件</p><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>Windows On 蓝奏云：<a href="https://akara.lanzoux.com/iTIcp0j6p6fc">https://akara.lanzoux.com/iTIcp0j6p6fc</a></p><p>Linux On 蓝奏云：<a href="https://akara.lanzoux.com/icXAI0j6pw1e">https://akara.lanzoux.com/icXAI0j6pw1e</a></p><h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h2><p>On Github: <a href="https://github.com/CavDev/Reload-Timer">https://github.com/CavDev/Reload-Timer</a></p><p>更多描述见仓库</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>软件</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>软件</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Hexo 预定义参数</title>
     <link href="/2022/06/29/Hexo%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8F%82%E6%95%B0/"/>
     <url>/2022/06/29/Hexo%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8F%82%E6%95%B0/</url>
@@ -73,25 +29,6 @@
   
   
   <entry>
-    <title>漫威电影宇宙时间轴</title>
-    <link href="/2022/05/05/%E6%BC%AB%E5%A8%81%E7%94%B5%E5%BD%B1%E5%AE%87%E5%AE%99%E6%97%B6%E9%97%B4%E8%BD%B4/"/>
-    <url>/2022/05/05/%E6%BC%AB%E5%A8%81%E7%94%B5%E5%BD%B1%E5%AE%87%E5%AE%99%E6%97%B6%E9%97%B4%E8%BD%B4/</url>
-    
-    <content type="html"><![CDATA[<h1 id="m"><a href="#m" class="headerlink" title="m"></a>m</h1><h1 id="漫威电影宇宙时间轴"><a href="#漫威电影宇宙时间轴" class="headerlink" title="漫威电影宇宙时间轴"></a>漫威电影宇宙时间轴</h1><p>第一部，《钢铁侠1》<br>第二部，《无敌浩克》<br>第三部，《钢铁侠2》<br>第四部，《雷神》<br>第五部，《美国队长1：复仇者先锋》<br>第六部，《复仇者联盟1》<br>第七部，《钢铁侠3 》<br>第八部，《雷神2:黑暗世界》<br>第九部，《美国队长2:冬日战士》<br>第十部，《银河护卫队》<br>第十一部，《复仇者联盟2:奥创纪元》<br>第十二部，《蚁人》<br>第十三部，《美国队长3:内战》<br>第十四部，《奇异博士》<br>第十五部，《银河护卫队2》<br>第十六部，《蜘蛛侠:英雄归来》<br>第十七部，《雷神3：诸神黄昏》<br>第十八部，《黑豹》<br>第十九部，《复仇者联盟3:无限战争》<br>第二十部，《蚁人2：黄蜂女现身》<br>第二十一部，《惊奇队长》<br>第二十二部，《复仇者联盟4：终局之战》<br>第二十三部，《蜘蛛侠：英雄远征》<br>第二十四部，《黑寡妇》<br>第二十五部，《尚气与十环传奇》<br>第二十六部，《永恒族》<br>第二十七部，《蜘蛛侠：英雄无归》</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>影视</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>MD 速查文档</title>
     <link href="/2022/01/25/MD%E9%80%9F%E6%9F%A5%E6%96%87%E6%A1%A3/"/>
     <url>/2022/01/25/MD%E9%80%9F%E6%9F%A5%E6%96%87%E6%A1%A3/</url>
@@ -109,31 +46,6 @@
     <tags>
       
       <tag>MarkDown</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Tkinter 快速上手</title>
-    <link href="/2021/11/01/Tkinter%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
-    <url>/2021/11/01/Tkinter%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</url>
-    
-    <content type="html"><![CDATA[<h1 id="Tkinter-快速上手"><a href="#Tkinter-快速上手" class="headerlink" title="Tkinter 快速上手"></a>Tkinter 快速上手</h1><p><em><strong>本文由</strong>NsX7</em><em>编写，第一次写文档，如有遗漏，欢迎指出  &#x3D;D</em>**</p><p>2021.10.4 14:08:20</p><h2 id="1-1-Tkinter的简介"><a href="#1-1-Tkinter的简介" class="headerlink" title="1.1 Tkinter的简介"></a>1.1 Tkinter的简介</h2><p> Tkinter 是 Python 内置的标准 GUI 库，可以运行在绝大多数的操作系统上（如Windows, Mac, Linux, Unix）</p><p>下面是一个简单的示例，当你将它编译后，你将会得到一个标题为tk的窗体</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *   <span class="hljs-comment">#引用tkinter</span><br><br>mainwindow = Tk() <span class="hljs-comment"># 初始化</span><br><br>mainwindow.mainloop()   <span class="hljs-comment">#使窗体进入信息循环</span><br></code></pre></td></tr></table></figure><p>我们还可以向其中加入一些窗体的属性</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *<br><br>mainwindow = Tk()<br>mainwindow.geometry(<span class="hljs-string">&quot;350x400&quot;</span>)     <span class="hljs-comment">#规定窗体大小</span><br>mainwindow.title(<span class="hljs-string">&quot;Hello World&quot;</span>)    <span class="hljs-comment">#规定窗体标题</span><br><br>mainwindow.mainloop()<br></code></pre></td></tr></table></figure><h2 id="1-2-控件"><a href="#1-2-控件" class="headerlink" title="1.2 控件"></a>1.2 控件</h2><p>Tkinter提供了许多的控件，我们可以选择控件来把它放在窗体上</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *<br><br>mainwindow = Tk()<br>mainwindow.geometry(<span class="hljs-string">&quot;300x300&quot;</span>)<br>mainwindow.title(<span class="hljs-string">&quot;Hello World&quot;</span>)<br><br>lb1 = Label(text=<span class="hljs-string">&quot;Hello World! 你好世界！&quot;</span>, fore=<span class="hljs-string">&#x27;green&#x27;</span>)<br>btn1 = Button(text=<span class="hljs-string">&quot;ClickMe&quot;</span>, fore=<span class="hljs-string">&#x27;red&#x27;</span>, cursor=<span class="hljs-string">&quot;hand2&quot;</span>)<br><br>lb1.pack()<br>btn1.pack()<br><br>mainwindow.mainloop()<br></code></pre></td></tr></table></figure><p><strong>我们可以在写完控件后将其赋值，再布局</strong></p><p>也可以不赋值，如同下面这么写</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">Label(text=<span class="hljs-string">&quot;Hello World! 你好世界！&quot;</span>, fore=<span class="hljs-string">&#x27;green&#x27;</span>).pack()<br></code></pre></td></tr></table></figure><p><strong>“pack”是一种布局方式，在不传入参数的情况下，会以默认形式从上到下排版</strong></p><p><strong>在Tkinter中，控件必须写出布局方式，不然控件将不会出现在窗体</strong></p><hr><p>以下是pack的一些参数</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs python">side:按扭停靠在窗口的哪个位置<br><br>　　　　left: 左<br><br>　　　　top: 上<br><br>　　　　right: 右<br><br>　　　　botton: 下<br><br>　　fill:填充<br><br>　　　　x:水平方向填充<br><br>　　　　y:竖直方向填充<br><br>　　　　both:水平和竖直方向填充<br><br>　　　　none:不填充<br><br>　　expand:<br><br>　　　　yes:扩展整个空白区<br><br>　　　　no:不扩展<br><br>　　anchor:<br><br>　　　　N:北  下<br><br>　　　　E:东  右<br><br>　　　　S:南 下<br><br>　　　　W:西 左<br><br>　　　　CENTER:中间<br><br>　　padx:x方向的外边距<br><br>　　pady:y方向的外边距<br><br>　　ipadx:x方向的内边距<br><br>　　ipady：y方向的内边距<br></code></pre></td></tr></table></figure><p>除了pack以外，还有grid和place两种布局方法，现在无需太过意了解pack，我们在后面会讲到后两种布局方式。</p><hr><p>下面来讲控件属性</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">text=<span class="hljs-string">&quot;Hello World! 你好世界！&quot;</span>, fore=<span class="hljs-string">&#x27;green&#x27;</span> <br></code></pre></td></tr></table></figure><p>在控件后的括号内，我们可以编写控件的属性，声明一个控件属性的语法如下</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">xxx=<span class="hljs-string">&quot;&quot;</span>, yyy=<span class="hljs-string">&quot;&quot;</span><br></code></pre></td></tr></table></figure><p>前段写属性名称，后段写属性的值，中间用&#x3D;号来赋值。在写下一个属性的时候，中间要用逗号隔开，然后再写下一个属性</p><hr><p><strong>Tkinter中内置了许许多多的控件及控件属性，由于时间（偷懒）问题不在此编写</strong></p><p><strong>但我找到了一篇讲的很好的介绍Tkinter控件及属性的文章，大家可以去👀👇</strong></p><p><a href="https://blog.csdn.net/weixin_43533825/article/details/88658691">https://blog.csdn.net/weixin_43533825&#x2F;article&#x2F;details&#x2F;88658691</a></p><h2 id="1-3-事件处理"><a href="#1-3-事件处理" class="headerlink" title="1.3 事件处理"></a>1.3 事件处理</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *<br><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> messagebox<br><br>mainwindow = Tk()<br>mainwindow.geometry(<span class="hljs-string">&quot;300x300&quot;</span>)<br>mainwindow.title(<span class="hljs-string">&quot;Hello World&quot;</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">btn1_Click</span>():<br>    hello = messagebox.showinfo(title=<span class="hljs-string">&quot;Hello World&quot;</span>, message=<span class="hljs-string">&quot;你好世界&quot;</span>)<br><br>lb1 = Label(text=<span class="hljs-string">&quot;Hello World! 你好世界！&quot;</span>, fore=<span class="hljs-string">&#x27;green&#x27;</span>)<br>btn1 = Button(text=<span class="hljs-string">&quot;ClickMe&quot;</span>, fore=<span class="hljs-string">&#x27;red&#x27;</span>, command=btn1_Click, cursor=<span class="hljs-string">&quot;hand2&quot;</span>)<br><br>lb1.place(x=<span class="hljs-number">5</span>, y=<span class="hljs-number">5</span>)<br>btn1.place(x=<span class="hljs-number">5</span>, y=<span class="hljs-number">28</span>)<br><br>mainwindow.mainloop()<br></code></pre></td></tr></table></figure><p>将此段编译一下，点击按钮，你会得到一个内容为“你好世界”的信息框，那这是怎么实现的呢？</p><p>这就是我们在这里要讲的：“事件处理”</p><hr><p>在Tkinter中，绑定事件是一件很容易的事</p><p><strong>我们在控件的属性中使用 command 来绑定一个事件</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">Button(text=<span class="hljs-string">&quot;Hello&quot;</span>, command=xxx)<br></code></pre></td></tr></table></figure><p><strong>后面则加上事件名称，事件则就是一个 def 函数，如果你用心观察，也许你也发现了示例代码中的 btn_click 事件。</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 例子</span><br><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *<br><br>mainwindow = Tk();<br>mainwindow.title(<span class="hljs-string">&#x27;事件&#x27;</span>)<br>mainwindow.geometry(<span class="hljs-string">&#x27;300x300&#x27;</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">btn1_click</span>():<br>    Label(text=<span class="hljs-string">&#x27;嘿，你点了我！&#x27;</span>).place(x=<span class="hljs-number">50</span>, y=<span class="hljs-number">50</span>)<br><br>btn1 = Button(text=<span class="hljs-string">&#x27;点击我&#x27;</span>, command=btn1_click, height=<span class="hljs-number">1</span>, width=<span class="hljs-number">12</span>)<br><br>btn1.place(x=<span class="hljs-number">0</span>, y=<span class="hljs-number">0</span>)<br><br>mainwindow.mainloop()<br></code></pre></td></tr></table></figure><p>这里可能有人要问了，那么上面那个信息框是怎么实现的？</p><p>这些则是使用messagebox实现的</p><p><strong>messagebox是tkinter中可以用来显示信息、确认信息的一个模块</strong></p><p><strong>messagebox有着许多参数，在此不加赘述，可见下方链接 ↓</strong></p><p><a href="https://blog.csdn.net/Bugest/article/details/81557112">https://blog.csdn.net/Bugest/article/details/81557112</a></p><p>下面是示例</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *<br><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> messagebox <span class="hljs-comment"># 使用messagebox需先引用</span><br><br>mainwindow = Tk();<br>mainwindow.title(<span class="hljs-string">&#x27;事件&#x27;</span>)<br>mainwindow.geometry(<span class="hljs-string">&#x27;300x300&#x27;</span>) <span class="hljs-comment"># 窗体大小</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">btn1_click</span>():  <br>    messagebox.showwarning(title=<span class="hljs-string">&#x27;WARNING&#x27;</span>, message=<span class="hljs-string">&#x27;警告，电脑将在30秒后爆炸&#x27;</span>)<br>    <span class="hljs-comment"># 输出一个警告窗体，其中 title= 后写窗体标题， message= 后写信息</span><br><br>btn1 = Button(text=<span class="hljs-string">&#x27;点击我&#x27;</span>, command=btn1_click) <span class="hljs-comment"># 放置按钮，绑定事件</span><br><br>btn1.place(x=<span class="hljs-number">3</span>, y=<span class="hljs-number">3</span>) <span class="hljs-comment"># 布局</span><br><br>mainwindow.mainloop()<br></code></pre></td></tr></table></figure><h2 id="1-4-总结"><a href="#1-4-总结" class="headerlink" title="1.4 总结"></a>1.4 总结</h2><p>此文为快速入门，虽是快速入门，其实Tkinter本来就是这么简单，虽然它可能比不上目前流行的一些GUI框架或是Python的GUI框架，但不可不说Tkinter也是个不错的选择。</p><p>在你看完了这篇文章后，相信你对Tkinter已经有了一定的认识，能做出自己的程序了，如果你还希望进一步学习Tkinter，这里有几份推荐给你</p><hr><p>#Tkinter详细教程#  <a href="https://blog.csdn.net/RNG_uzi_/article/details/89792518?ops_request_misc=%7B%22request_id%22:%22163577762916780255274290%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163577762916780255274290&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-89792518.first_rank_v2_pc_rank_v29&utm_term=tkinter">Python-Tkinter图形化界面设计（详细教程 ）_Zhangfei Wang-CSDN博客_tkinter</a> </p><blockquote><p><strong>u1s1，这个比我讲得详细多了</strong></p></blockquote><p>#Tkinter的place布局#  <a href="https://blog.csdn.net/Riven_h/article/details/117531522?ops_request_misc=%7B%22request_id%22:%22163577762916780255249776%22,%22scm%22:%2220140713.130102334.pc_blog.%22%7D&request_id=163577762916780255249776&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-8-117531522.first_rank_v2_pc_rank_v29&utm_term=tkinter">tkinter的Frame布局_Riven_h的博客-CSDN博客</a></p><blockquote><p><strong>Tkinter的Place布局方法</strong></p></blockquote><p>#Tkinter的grid布局#  <a href="https://blog.csdn.net/weixin_43708622/article/details/107134216?ops_request_misc=%7B%22request_id%22:%22163577762916780255249776%22,%22scm%22:%2220140713.130102334.pc_blog.%22%7D&request_id=163577762916780255249776&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-17-107134216.first_rank_v2_pc_rank_v29&utm_term=tkinter">tkinter-grid布局详解_渔道的博客-CSDN博客</a></p><blockquote><p><strong>Tkinter的Grid布局方法</strong></p></blockquote><p>#Tkinter窗体设置#  <a href="https://blog.csdn.net/m0_51713294/article/details/110529034?ops_request_misc=&request_id=&biz_id=102&utm_term=python">怎么用python tkinter做窗口边框美化？_m0_51713294的博客-CSDN博客</a></p><blockquote><p><strong>关于Tkinter窗体的一些设置，挺实用的</strong></p></blockquote><p>#Tkinter学生管理系统#  <a href="https://blog.csdn.net/qq1123642601/article/details/90760485?ops_request_misc=%7B%22request_id%22:%22163577913716780261963745%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163577913716780261963745&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-90760485.first_rank_v2_pc_rank_v29&utm_term=python+tkinter%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F&spm=1018.2226.3001.4187">python+tkinter学生管理系统_WF帆少的博客-CSDN博客_tkinter学生管理系统</a></p><blockquote><p><strong>Tkinter一个做学生管理系统的小例子</strong></p></blockquote><p>#Tkinter五子棋#  <a href="https://blog.csdn.net/qq_40298768/article/details/106082306?ops_request_misc=%7B%22request_id%22:%22163577913816780261938236%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163577913816780261938236&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-106082306.first_rank_v2_pc_rank_v29&utm_term=python+tkinter%E5%81%9A%E6%B8%B8%E6%88%8F">Python tkinter实现小游戏五子棋_guocy-ww的博客-CSDN博客</a></p><blockquote><p><strong>Tkinter五子棋</strong></p></blockquote><p>没了</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>技术相关</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>教程</tag>
       
     </tags>
     
