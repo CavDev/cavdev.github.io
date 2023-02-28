@@ -1,0 +1,1619 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ico.ico">
+  <link rel="icon" href="/img/ico.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2b84ff">
+  <meta name="author" content="Xudx">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="C 语言基础前面我们已经搭建好了基本的学习环境，现在就让我们开始C语言的学习吧！ C语言的语法层面内容相比其他语言来说，其实算少的了，但是它的难点在于很多概念上的理解，这也是为什么上一章一直在说一些计算机基础相关内容（包括这一章还会继续补一点），这样会有助于各位对于语言的理解，C语言可以说是步入编程领域的分水岭，跨过了这道坎，后续其他编程语言的学习都会无比轻松。 学习编程的过程可能会很枯燥，但是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C 语言基础">
+<meta property="og:url" content="http://example.com/2023/03/01/C%20%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Xudx 的博客">
+<meta property="og:description" content="C 语言基础前面我们已经搭建好了基本的学习环境，现在就让我们开始C语言的学习吧！ C语言的语法层面内容相比其他语言来说，其实算少的了，但是它的难点在于很多概念上的理解，这也是为什么上一章一直在说一些计算机基础相关内容（包括这一章还会继续补一点），这样会有助于各位对于语言的理解，C语言可以说是步入编程领域的分水岭，跨过了这道坎，后续其他编程语言的学习都会无比轻松。 学习编程的过程可能会很枯燥，但是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/post_img/c.png">
+<meta property="article:published_time" content="2023-02-28T16:01:30.000Z">
+<meta property="article:modified_time" content="2023-02-28T18:09:31.619Z">
+<meta property="article:author" content="Xudx">
+<meta property="article:tag" content="C">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/post_img/c.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>C 语言基础 - Xudx 的博客</title>
+
+  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":105,"cursorChar":"|","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"660837672016b8e73d7666451fc3e988","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?660837672016b8e73d7666451fc3e988";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Xudx 的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xudx</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/softs/">
+                <i class="iconfont icon-exp-fill"></i>
+                软件
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/PlayMusics/">
+                <i class="iconfont icon-music"></i>
+                音乐
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/./post_img/c.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="C 语言基础"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Xudx
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-03-01 00:01" pubdate>
+          2023年3月1日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          32k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          102 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">C 语言基础</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    <!-- compatible with older versions-->
+                    本文最后更新于：2023年3月1日 凌晨
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p><img src="https://images3.alphacoders.com/129/thumbbig-1296027.webp" srcset="/img/loading.gif" lazyload></p>
+<h1 id="C-语言基础"><a href="#C-语言基础" class="headerlink" title="C 语言基础"></a>C 语言基础</h1><p>前面我们已经搭建好了基本的学习环境，现在就让我们开始C语言的学习吧！</p>
+<p>C语言的语法层面内容相比其他语言来说，其实算少的了，但是它的难点在于很多概念上的理解，这也是为什么上一章一直在说一些计算机基础相关内容（包括这一章还会继续补一点），这样会有助于各位对于语言的理解，C语言可以说是步入编程领域的分水岭，跨过了这道坎，后续其他编程语言的学习都会无比轻松。</p>
+<p>学习编程的过程可能会很枯燥，但是请各位一定不要心急，一步一个脚印，相信大家一定能通关。</p>
+<blockquote>
+<p>  <strong>声明：</strong>此系列 C 语言教程均来自 B 站 UP 主 <strong>青空の霞光</strong>，本人仅做搬运处理</p>
+<p>  作者：<a target="_blank" rel="noopener" href="https://space.bilibili.com/37737161">https://space.bilibili.com/37737161</a></p>
+</blockquote>
+<h2 id="C-程序基本格式"><a href="#C-程序基本格式" class="headerlink" title="C 程序基本格式"></a>C 程序基本格式</h2><p>前面我们在创建项目之后自动生成了一个<code>.c</code>文件，这个就是我们编写的程序代码文件：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World!&quot;</span>);<br>  	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>操作系统需要执行我们的程序，但是我们的程序中可能写了很多很多的代码，那么肯定需要知道从哪里开始执行才可以，也就是程序的入口，所以我们需要提供一个入口点，我们的C语言程序入口点就是<code>main</code>函数（不过现在还没有讲到函数，所以各位就理解为固定模式即可）它的写法是：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;  <span class="hljs-comment">//所有的符号一律采用英文的，别用中文</span><br>    程序代码...<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>注意是<code>int</code>后面空格跟上<code>main()</code>，我们的程序代码使用花括号<code>&#123;&#125;</code>进行囊括（有的人为了方便查阅，会把前半个花括号写在下面）</p>
+<p>然后我们看到，如果我们需要打印一段话到控制台，那么就需要使用<code>printf(内容)</code>来完成，这其实就是一种函数调用，但是现在我们还没有接触到，我们注意到括号里面的内容就是我们要打印到控制台的内容：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World!&quot;</span>);   <span class="hljs-comment">//注意最后需要添加;来结束这一行，注意是英文的分号，不是中文的！</span><br></code></pre></td></tr></table></figure>
+
+<p>我们要打印的内容需要采用双引号进行囊括，被双引号囊括的这一端话，我们称为字符串，当然我们现在还没有学到，所以各位也是记固定模式就好，当我们需要向控制台打印一段话时，就要用双引号囊括这段话，然后放入<code>printf</code>即可。我们会在后续的学习中逐渐认识<code>printf</code>函数。</p>
+<p>最顶上还有一句：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<p>这个是引入系统库为我们提供的函数，包括<code>printf</code>在内，所以我们以后编写一个C语言程序，就按照固定模式：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    程序代码<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>除了程序代码部分我们会进行编写之外，其他的地方采用固定模式就好。</p>
+<p>我们在写代码的过程中可以添加一些注释文本，这些文本内容在编译时自动忽略，所以比如我们想边写边记点笔记，就可以添加注释，注释的格式为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">#include &lt;stdio.h&gt;   <span class="hljs-comment">//引入标准库头文件</span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;   <span class="hljs-comment">//主函数，程序的入口点</span><br>    printf(<span class="hljs-string">&quot;Hello World!&quot;</span>);  <span class="hljs-comment">//向控制台打印字符串</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然我们也可以添加多行注释：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">#include &lt;stdio.h&gt;<br><br><span class="hljs-comment">/*</span><br><span class="hljs-comment"> * 这是由IDE自动生成的测试代码</span><br><span class="hljs-comment"> * 还是可以的</span><br><span class="hljs-comment"> */</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    printf(<span class="hljs-string">&quot;Hello World!&quot;</span>);<br>  	<span class="hljs-comment">//最后还有一句 return 0; 但是我们可以不用写，编译器会自动添加，所以后面讲到之后我们再来说说这玩意。</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>OK，基本的一些内容就讲解完毕了。</p>
+<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><p>我们的程序离不开数据，比如我们需要保存一个数字或是字母，这时候这些东西就是作为数据进行保存，不过不同的数据他们的类型可能不同，比如1就是一个整数，0.5就是一个小数，A就是一个字符，C语言提供了多种数据类型供我们使用，我们就可以很轻松的使用这些数据了。</p>
+<p>不同的数据类型占据的空间也会不同，这里我们需要先提一个概念，就是字、字节是什么？</p>
+<p>我们知道，计算机底层实际上只有0和1能够表示，这时如果我们要存储一个数据，比如十进制的3，那么就需要使用2个二进制位来保存，二进制格式为<code>11</code>，占用两个位置，再比如我们要表示十进制的15，这时转换为二进制就是<code>1111</code>占用四个位置（4个bit位）来保存。一般占用8个bit位表示一个字节（B），2个字节等于1个字，所以一个字表示16个bit位，它们是计量单位。</p>
+<p>我们常说的内存大小1G、2G等，实际上就是按照下面的进制进行计算的：</p>
+<p>8 bit &#x3D; 1 B ，1024 B &#x3D; 1KB，1024 KB &#x3D; 1 MB，1024 MB &#x3D; 1GB，1024 GB &#x3D; 1TB，1024TB &#x3D; 1PB（基本上是1024一个大进位，但是有些硬盘生产厂商是按照1000来计算的，所以我们买电脑的硬盘容量可能是512G的但是实际容量可能会缩水）</p>
+<p>在不同位数的系统下基本数据类型的大小可能会不同，因为现在主流已经是64位系统，本教程统一按照64位系统进行讲解。</p>
+<h3 id="原码、反码和补码"><a href="#原码、反码和补码" class="headerlink" title="原码、反码和补码"></a>原码、反码和补码</h3><h4 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h4><p>上面我们说了实际上所有的数字都是使用0和1这样的二进制数来进行表示的，但是这样仅仅只能保存正数，那么负数怎么办呢？</p>
+<p>比如现在一共有4个bit位来保存我们的数据，为了表示正负，我们可以让第一个bit位专门来保存符号，这样，我们这4个bit位能够表示的数据范围就是：</p>
+<ul>
+<li>最小：1111 &#x3D;&gt; - (2^2+2^1+2^0) &#x3D;&gt; -7</li>
+<li>最大：0111 &#x3D;&gt; + (2^2+2^1+2^0) &#x3D;&gt; +7 &#x3D;&gt; 7</li>
+</ul>
+<p>虽然原码表示简单，但是原码在做加减法的时候，很麻烦！以4bit位为例：</p>
+<p>1+(-1) &#x3D; 0001 + 1001 &#x3D; 怎么让计算机去计算？（虽然我们知道该去怎么算，但是计算机不知道，计算机顶多知道1+1需要进位！）</p>
+<p>我们得创造一种更好的表示方式！于是我们引入了反码：</p>
+<h4 id="反码"><a href="#反码" class="headerlink" title="反码"></a>反码</h4><p>正数的反码是其本身<br>负数的反码是在其原码的基础上, 符号位不变，其余各个位取反<br>经过上面的定义，我们再来进行加减法：</p>
+<p>1+(-1) &#x3D; 0001 + 1110 &#x3D; 1111 &#x3D;&gt; -0 （直接相加，这样就简单多了！）</p>
+<p>思考：1111代表-0，0000代表+0，在我们实数的范围内，0有正负之分吗？</p>
+<p>0既不是正数也不是负数，那么显然这样的表示依然不够合理！</p>
+<h4 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h4><p>根据上面的问题，我们引入了最终的解决方案，那就是补码，定义如下：</p>
+<p>正数的补码就是其本身 （不变！）<br>负数的补码是在其原码的基础上, 符号位不变, 其余各位取反, 最后+1. (即在反码的基础上+1)<br>其实现在就已经能够想通了，-0其实已经被消除了！我们再来看上面的运算：</p>
+<p>1+(-1) &#x3D; 0001 + 1111 &#x3D; (1)0000 &#x3D;&gt; +0 （现在无论你怎么算，也不会有-0了！）</p>
+<p>所以现在，4bit位能够表示的范围是：-8~+7（C使用的就是补码！）</p>
+<h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><p>我们首先来看看整数类型，整数就是不包含小数点的数据，比如<code>1</code>，<code>99</code>，<code>666</code>等数字，整数包含以下几种类型：</p>
+<ul>
+<li>int   -    占用 4 个字节，32个bit位，能够表示 -2,147,483,648 到 2,147,483,647 之间的数字，默认一般都是使用这种类型</li>
+<li>long   -   占用 8 个字节，64个bit位。</li>
+<li>short   -    占用2个字节，16个bit位。</li>
+</ul>
+<h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><p>浮点类一般用于保存小数，不过为啥不叫小数类型而是浮点类型呢？因为我们的一个小数分为整数部分和小数部分，我们需要用一部分的bit位去表示整数部分，而另一部分去表示小数部分，至于整数部分和小数部分各自占多少并不是固定的，而是浮动决定的（在计算机组成原理中会深入学习，这里就不多介绍了）</p>
+<ul>
+<li>float   -   单精度浮点，占用4个字节，32个bit位。</li>
+<li>double    -    双精度浮点，占用8个字节，64个bit位。</li>
+</ul>
+<h3 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h3><p>除了保存数字之外，C语言还支持字符类型，我们的每一个字符都可以使用字符类型来保存：</p>
+<ul>
+<li>char   -    占用1个字节（-128~127），可以表示所有的ASCII码字符，每一个数字对应的是编码表中的一个字符：</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/06/17/BoaWb5EHOM7wJVy.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603114358826"></p>
+<p>编码表中包含了所有我们常见的字符，包括运算符号、数字、大小写字母等（注意只有英文相关的，没有中文和其他语言字符，包括中文的标点符号也没有）</p>
+<p>某些无法直接显示的字符（比如换行，换行也算一个字符）需要使用转义字符来进行表示：</p>
+<p><img src="https://s2.loli.net/2022/06/17/fqnzER2AS4YleTG.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>有关基本类型的具体使用我们放到下一节进行讲解。</p>
+<hr>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>前面我们了解了C语言中的基本类型，那么我们如何使用呢？这时我们就可以创建不同类型的变量了。</p>
+<h3 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h3><p>变量就像我们在数学中学习的<code>x</code>，<code>y</code>一样，我们可以直接声明一个变量，并利用这些变量进行基本的运算，声明变量的格式为：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c">数据类型 变量名称 = 初始值;    <span class="hljs-comment">//其中初始值可以不用在定义变量时设定</span><br><span class="hljs-comment">// = 是赋值操作，可以将等号后面的值赋值给前面的变量，等号后面可以直接写一个数字（常量）、变量名称、算式</span><br></code></pre></td></tr></table></figure>
+
+<p>比如我们现在想要声明一个整数类型的变量：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;   <span class="hljs-comment">//变量类型为int（常用），变量名称为a，变量的初始值为10</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;   <span class="hljs-comment">//多个变量可以另起一行编写，也可以像这样用逗号隔开，注意类型必须是一样的</span><br></code></pre></td></tr></table></figure>
+
+<p>其中，变量的名称并不是随便什么都可以的，它有以下规则：</p>
+<ul>
+<li>不能重复使用其他变量使用过的名字。</li>
+<li>只能包含英文字母或是下划线、数字，并且严格区分大小写，比如<code>a</code>和<code>A</code>不算同一个变量。</li>
+<li>虽然可以包含数字，但是不能以数字开头。</li>
+<li>不能是关键字（比如我们上面提到的所有基本数据类型，当然还有一些关键字我们会在后面认识）</li>
+<li>（建议）使用英文单词，不要使用拼音，多个词可以使用驼峰命名法或是通过下划线连接。</li>
+</ul>
+<p>初始值可以是一个常量数据（比如直接写10、0.5这样的数字）也可以是其他变量，或是运算表达式的结果，这样会将其他变量的值作为初始值。</p>
+<p>我们可以使用变量来做一些基本的运算：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">#include &lt;stdio.h&gt;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;  <span class="hljs-comment">//将10作为a的值</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> a + b;   <span class="hljs-comment">//注意变量一定要先声明再使用，这里是计算a + b的结果（算式），并作为c的初始值</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这里使用到了<code>+</code>运算符（之后我们还会介绍其他类型的运算符）这个运算符其实就是我们数学中学习的加法运算，会将左右两边的变量值加起来，得到结果，我们可以将运算结果作为其他变量的初始值，还是很好理解的。</p>
+<p>但是现在虽然做了运算，我们还不知道运算的具体结果是什么，所以这里我们通过前面认识的<code>printf</code>函数来将结果打印到控制台：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    <span class="hljs-type">int</span> b = <span class="hljs-number">20</span>;<br>    <span class="hljs-type">int</span> c = a + b;<br><br>    <span class="hljs-built_in">printf</span>(c);   <span class="hljs-comment">//直接打印变量c</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>但是我们发现这样似乎运行不出来结果，不对啊，前面你不是说把要打印到控制台的内容写到<code>printf</code>中吗，怎么这里不行呢？实际上<code>printf</code>是用于格式化打印的，我们来看看如何进行格式化打印，输出我们的变量值：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;c的结果是：%d&quot;</span>, );   <span class="hljs-comment">//使用%d来代表一个整数类型的数据（占位符），在打印时会自动将c的值替换上去</span><br></code></pre></td></tr></table></figure>
+
+<p>我们来看看效果：</p>
+<p><img src="https://s2.loli.net/2022/06/17/lb4T2HEXP7jCWIx.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603131740600"></p>
+<p>这样，我们就知道该如何打印我们变量的值了，当然，除了使用<code>%d</code>打印有符号整数之外，还有其他的：</p>
+<table>
+<thead>
+<tr>
+<th>格式控制符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%c</td>
+<td>输出一个单一的字符</td>
+</tr>
+<tr>
+<td>%hd、%d、%ld</td>
+<td>以十进制、有符号的形式输出 short、int、long 类型的整数</td>
+</tr>
+<tr>
+<td>%hu、%u、%lu</td>
+<td>以十进制、无符号的形式输出 short、int、long 类型的整数</td>
+</tr>
+<tr>
+<td>%ho、%o、%lo</td>
+<td>以八进制、不带前缀、无符号的形式输出 short、int、long 类型的整数</td>
+</tr>
+<tr>
+<td>%#ho、%#o、%#lo</td>
+<td>以八进制、带前缀、无符号的形式输出 short、int、long 类型的整数</td>
+</tr>
+<tr>
+<td>%hx、%x、%lx %hX、%X、%lX</td>
+<td>以十六进制、不带前缀、无符号的形式输出 short、int、long 类型的整数。如果 x 小写，那么输出的十六进制数字也小写；如果 X 大写，那么输出的十六进制数字也大写。</td>
+</tr>
+<tr>
+<td>%#hx、%#x、%#lx %#hX、%#X、%#lX</td>
+<td>以十六进制、带前缀、无符号的形式输出 short、int、long 类型的整数。如果 x 小写，那么输出的十六进制数字和前缀都小写；如果 X 大写，那么输出的十六进制数字和前缀都大写。</td>
+</tr>
+<tr>
+<td>%f、%lf</td>
+<td>以十进制的形式输出 float、double 类型的小数</td>
+</tr>
+<tr>
+<td>%e、%le %E、%lE</td>
+<td>以指数的形式输出 float、double 类型的小数。如果 e 小写，那么输出结果中的 e 也小写；如果 E 大写，那么输出结果中的 E 也大写。</td>
+</tr>
+<tr>
+<td>%g、%lg %G、%lG</td>
+<td>以十进制和指数中较短的形式输出 float、double 类型的小数，并且小数部分的最后不会添加多余的 0。如果 g 小写，那么当以指数形式输出时 e 也小写；如果 G 大写，那么当以指数形式输出时 E 也大写。</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>输出一个字符串</td>
+</tr>
+</tbody></table>
+<p>比如现在我们要进行小数的运算，还记得我们前面介绍的小数类型有哪些吗？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">double</span> a = <span class="hljs-number">0.5</span>;<br>    <span class="hljs-type">float</span> b = <span class="hljs-number">2.5f</span>;   <span class="hljs-comment">//注意直接写2.5默认表示的是一个double类型的值，我们需要再后面加一个f或是F表示是flaot类型值</span><br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a + b的结果是：%f&quot;</span>, a + b);   <span class="hljs-comment">//根据上表得到，小数类型需要使用%f表示，这里我们可以直接将a + b放入其中</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>可以看到，结果也是正确的：</p>
+<p><img src="https://s2.loli.net/2022/06/17/M8ia6jKlW7epwXg.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603132459810"></p>
+<p>当然，我们也可以一次性打印多个，只需要填写多个占位符表示即可：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">double</span> a = <span class="hljs-number">0.5</span>;<br>    <span class="hljs-type">float</span> b = <span class="hljs-number">2.5f</span>;   <span class="hljs-comment">//整数类型默认是int，如果要表示为long类型的值，也是需要在最后添加一个l或L</span><br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %f, b = %f&quot;</span>, a, b);   <span class="hljs-comment">//后面可以一直添加（逗号隔开），但是注意要和前面的占位符对应</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>结果也是正常的：</p>
+<p><img src="https://s2.loli.net/2022/06/17/2n6GfkdlFPX4Bv1.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603132713970"></p>
+<p>我们再来看看字符类型：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;A&#x27;</span>;   <span class="hljs-comment">//字符需要使用单引号囊括，且只能有一个字符，不能写成&#x27;AA&#x27;，这就不是单个字符了</span><br><span class="hljs-comment">//注意这里的A代表的是A这个字符，对应的ASCII码是65，实际上c存储的是65这个数字</span><br></code></pre></td></tr></table></figure>
+
+<p>我们也可以通过格式化打印来查看它的值：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;A&#x27;</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;变量c的值为：%c 对应的ASCII码为：%d&quot;</span>, c, c);   <span class="hljs-comment">//这里我们使用%c来以字符形式输出，%d输出的是变量数据的整数形式，其实就是对应的ASCII码</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/VsMorWTd13YLp8Q.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603133727498"></p>
+<p>当然，我们也可以直接让char存储一个数字（ASCII码），同样也可以打印出对应的字符：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-number">66</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;变量c的值为：%c 对应的ASCII码为：%d&quot;</span>, c, c);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/shjrQKayID9YwVc.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603133858133"></p>
+<p>那么现在请各位小伙伴看看下面这段代码会输出什么：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;a&#x27;</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;变量c的ASCII码为：%d&quot;</span>, c);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>没错，这里得到的结果就是字符<code>a</code>的ASCII码值，注意千万不要认为c得到的是变量a的值，这里使用的是字符<code>a</code>，跟上面的变量a半毛钱关系都没有：</p>
+<p><img src="https://s2.loli.net/2022/06/17/X1f6SzW7aBoFnJh.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603134234040"></p>
+<p>但是如果我们去掉引号，就相当于把变量a的值给了c，c现在的ASCII码就是10了，所以这里一定要分清楚。</p>
+<p>对于某些无法表示的字符，比如换行这类字符，我们没办法直接敲出来，只能使用转义字符进行表示：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;\n&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<p>详细的转义字符表参见前面的基本数据类型章节。</p>
+<p>变量除了有初始值之外，也可以在后续的过程中得到新的值：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">short</span> s = <span class="hljs-number">10</span>;<br>    s = <span class="hljs-number">20</span>;    <span class="hljs-comment">//重新赋值为20，注意这里就不要再指定类型了，指定类型只有在声明变量时才需要</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, s);   <span class="hljs-comment">//打印结果</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>可以看到，得到的是我们最后一次对变量修改的结果：</p>
+<p><img src="https://s2.loli.net/2022/06/17/mIXbe91qu7B5ZKU.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603135152184"></p>
+<p>那要是我们不对变量设定初始值呢？那么变量会不会有默认值：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a, b, c, d;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d,%d,%d,%d&quot;</span>, a, b, c, d);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>可以看到，虽然定义变量但是我们没有为其设定初始值，那么它的值就是不确定的了（千万注意并不是不设定值默认就是0）：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2v11c4z44j212o02mmxa.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603141341554"></p>
+<p>所以各位小伙伴以后在使用时一定要注意这个问题，至于为什么不是0，这是因为内存分配机制，我们在下一章高级篇再进行讲解。</p>
+<p>我们再来看一个例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-number">127</span>;    <span class="hljs-comment">//已经到达c的最大值了</span><br>    c = c + <span class="hljs-number">1</span>;   <span class="hljs-comment">//我不管，我就要再加</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, c);    <span class="hljs-comment">//这时会得到什么结果？</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/N7lGU4n2OkxjLcF.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603143909688"></p>
+<p>怎么127加上1还变成-128了呢？这是由于位数不够，导致运算结果值溢出：</p>
+<ul>
+<li>127  +   1&#x3D; 01111111   +    1</li>
+<li>由于现在是二进制，满2进1，所以最后变成</li>
+<li>10000000   &#x3D;   补码形式的 -128</li>
+</ul>
+<p>所以，了解上面这些计算机底层原理是很重要的，我们能够很轻松地知道为什么会这样。</p>
+<p>在我们的运算中，可能也会存在一些一成不变的值，比如<code>π</code>的值永远都是<code>3.1415....</code>，在我们的程序中，也可以使用这样不可变的变量，我们成为常量。</p>
+<p>定义常量和变量比较类似，但是需要在前面添加一个<code>const</code>关键字，表示这是一个常量：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2v0s7fdvgj2128052gls.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603140454728"></p>
+<p>可以看到，常量在一开始设定初始值后，后续是不允许进行修改的。</p>
+<h3 id="无符号数"><a href="#无符号数" class="headerlink" title="无符号数"></a>无符号数</h3><p>我们知道，所有的数据底层都是采用二进制来进行保存的，而第一位则是用于保存符号位，但是如果我们不考虑这个符号位，那么所有的数都是按照正数来表示，比如考虑了符号位的<code>char</code>类型：</p>
+<ul>
+<li>考虑符号表示范围：-128~127</li>
+<li>不考虑符号：0~255</li>
+</ul>
+<p>我们也可以直接使用这些不带符号位的数据类型：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> c = <span class="hljs-number">-65</span>;   <span class="hljs-comment">//数据类型前面添加unsigned关键字表示采用无符号形式</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%u&quot;</span>, c);    <span class="hljs-comment">//%u以无符号形式输出十进制数据</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>可以看到这里给了无符号char类型c一个-65的值，但是现在很明显符号位也是作为数值的表示部分，所以结果肯定不是-65：</p>
+<p><img src="https://s2.loli.net/2022/06/17/Hkg4MIFcXzKwClp.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603142210120"></p>
+<p>结合我们前面学习的基础知识，我们来看看为什么得到的是191这个数字。首先char类型占据一个字节，8个bit位：</p>
+<ul>
+<li>00000000   -&gt;    现在赋值-65    -&gt;    -65的补码形式   -&gt;     10111111</li>
+<li>由于现在没有符号位，一律都是正数，所以，10111111  &#x3D;  128 + 32 + 16 + 8 + 4 + 2 + 1 &#x3D; 191</li>
+</ul>
+<p>我们也可以直接以无符号数形式打印：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">-1</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%u&quot;</span>, i);    <span class="hljs-comment">//%u以无符号形式输出十进制数据</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/PYNZLCWc6OFVui8.jpg" srcset="/img/loading.gif" lazyload alt="image-20220603143441616"></p>
+<p>得到无符号int的最大值。</p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>一种类型的数据可以转换为其他类型的数据，这种操作我们称为类型转换，类型转换分为<strong>自动类型转换</strong>和<strong>强制类型转换</strong>，比如我们现在希望将一个short类型的数据转换为int类型的数据：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">#include &lt;stdio.h&gt;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">short</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> s;   <span class="hljs-comment">//直接将s的值传递给i即可，但是注意此时s和i的类型不同</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这里其实就是一种自动类型转换，自动类型转换就是编译器隐式地进行的数据类型转换，这种转换不需要我们做什么，我们直接写就行，会自动进行转换操作。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">float</span> a = <span class="hljs-number">3</span>;    <span class="hljs-comment">//包括这里我们给的明明是一个int整数3但是却可以赋值给float类型，说明也是进行了自动类型转换</span><br></code></pre></td></tr></table></figure>
+
+<p>如果我们使用一个比转换的类型最大值都还要大的值进行类型转换，比如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">511</span>;<br>    <span class="hljs-type">char</span> b = a;   <span class="hljs-comment">//最大127</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, b);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/U9rxV53lCzB4ARm.jpg" srcset="/img/loading.gif" lazyload alt="image-20220606180919318"></p>
+<p>很明显char类型是无法容纳大于127的数据的，因为只占一个字节，而int占4个字节，如果需要进行转换，那么就只能丢掉前面的就只保留char所需要的那几位了，所以这里得到的就是-1：</p>
+<ul>
+<li>511 &#x3D; int  -&gt;  00000000 00000000 00000001 11111111</li>
+<li>char   -&gt;   11111111   -&gt;    -1</li>
+</ul>
+<p>我们也可以将整数和小数类型的数据进行互相转换：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">99</span>;<br>    <span class="hljs-type">double</span> d = a;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%f&quot;</span>, d);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yolhtg3rj215o02iq2z.jpg" srcset="/img/loading.gif" lazyload alt="image-20220606180529600"></p>
+<p>不过这里需要注意的是，小数类型在转换回整数类型时，会丢失小数部分（注意，不是四舍五入，是直接丢失小数！）：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">double</span> a = <span class="hljs-number">3.14</span>;<br>    <span class="hljs-type">int</span> b = a;    <span class="hljs-comment">//这里编译器还提示了黄标，我们可以通过之后讲到的强制类型转换来处理</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, b);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yoncxo3gj210o02kmx5.jpg" srcset="/img/loading.gif" lazyload alt="image-20220606180719070"></p>
+<p>除了赋值操作可以进行自动类型转换之外，在运算中也会进行自动类型转换，比如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">float</span> a = <span class="hljs-number">2</span>;<br>    <span class="hljs-type">int</span> b = <span class="hljs-number">3</span>;<br>    <span class="hljs-type">double</span> c = b / a;   <span class="hljs-comment">//  &quot;/&quot; 是除以的意思，也就是我们数学中的除法运算，这里表示a除以b</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%f&quot;</span>, c);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/FQpoer6ANgjsIlY.jpg" srcset="/img/loading.gif" lazyload alt="image-20220606191838425"></p>
+<p>可以看到，这里得到的结果是小数1.5，但是参与运算的既有整数类型，又有浮点类型，结果为什么就确定为浮点类型了呢？这显然是由于类型转换导致的。那么规则是什么呢？</p>
+<p><img src="https://s2.loli.net/2022/06/17/39b2LouK8dfnNhv.jpg" srcset="/img/loading.gif" lazyload alt="image-20220606191412418"></p>
+<ul>
+<li>不同的类型优先级不同（根据长度而定）</li>
+<li>char和short类型在参与运算时一律转换为int再进行运算。</li>
+<li>浮点类型默认按双精度进行计算，所以就算有float类型，也会转换为double类型参与计算。</li>
+<li>当有一个更高优先级的类型和一个低优先级的类型同时参与运算时，统一转换为高优先级运算，比如int和long参与运算，那么int转换为long再算，所以结果也是long类型，int和double参与运算，那么先把int转换为double再算。</li>
+</ul>
+<p>我们接着来看看强制类型转换，我们可以为手动去指定类型，强制类型转换格式如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">(强制转换类型) 变量、常量或表达式;<br></code></pre></td></tr></table></figure>
+
+<p>比如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = (<span class="hljs-type">int</span>) <span class="hljs-number">2.5</span>;   <span class="hljs-comment">//2.5是一个double类型的值，但是我们可以强制转换为int类型赋值给a，强制转换之后小数部分丢失</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, a);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>我们也可以对一个算式的结果进行类型转换：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">double</span> a = <span class="hljs-number">3.14</span>;<br>    <span class="hljs-type">int</span> b = (<span class="hljs-type">int</span>) (a + <span class="hljs-number">2.8</span>);   <span class="hljs-comment">//注意得括起来表示对整个算式的结果进行类型转换（括号跟数学中的挺像，也是提升优先级使用的，我们会在运算符部分详细讲解），不然强制类型转换只对其之后紧跟着的变量生效</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, b);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>在我们需要得到两个int相除之后带小数的结果时，强制类型转换就显得很有用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">#include &lt;stdio.h&gt;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>, b = <span class="hljs-number">4</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> a / b;    <span class="hljs-comment">//不进行任何的类型转换，int除以int结果仍然是int，导致小数丢失</span><br>    <span class="hljs-type">double</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> (<span class="hljs-type">double</span>) a / b;   <span class="hljs-comment">//对a进行强制类型转换，现在是double和int计算，根据上面自动类型转换规则，后面的int自动转换为double，结果也是double了，这样就是正确的结果了</span><br>    printf(<span class="hljs-string">&quot;不进行类型转换: %f, 进行类型转换: %f&quot;</span>, c, d);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>合理地使用强制类型转换，能够解决我们很多情况下的计算问题。</p>
+<hr>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>前面我们了解了如何声明变量以及变量的类型转换，那么我们如何去使用这些变量来参与计算呢？这是我们本小节的重点。</p>
+<h3 id="基本运算符"><a href="#基本运算符" class="headerlink" title="基本运算符"></a>基本运算符</h3><p>基本运算符包含我们在数学中常用的一些操作，比如加减乘除，分别对应：</p>
+<ul>
+<li>加法运算符：+</li>
+<li>减法运算符：-</li>
+<li>乘法运算符：*</li>
+<li>除法运算符：&#x2F;（注意不是“\”，看清楚一点）</li>
+</ul>
+<p>当然，还有我们之前使用的赋值运算符<code>=</code>，我们先来看看赋值运算符的使用，其实在之前我们已经学习过了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">变量 = 值   <span class="hljs-comment">//其中，值可以直接是一个数字、一个变量、表达式的结果等</span><br></code></pre></td></tr></table></figure>
+
+<p>实际上等号左边的内容准确的说应该是一个左值，不过大部分情况下都是变量，这里就不展开左值和右值的话题了（感兴趣的小伙伴可以去详细了解，有助于后面学习C++理解右值引用）</p>
+<p>最简单的用法就是我们前面所说的，对一个变量进行赋值操作：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br></code></pre></td></tr></table></figure>
+
+<p>也可以连续地使用赋值操作，让一连串的变量都等于后面的值：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a, b;<br>a = b = <span class="hljs-number">20</span>;   <span class="hljs-comment">//从右往左依次给b和a赋值20</span><br></code></pre></td></tr></table></figure>
+
+<p>可以看出，实际上<code>=</code>运算除了赋值之外，和加减乘除运算一样也是有结果的，比如上面的 a &#x3D; 就是b &#x3D; 20 运算的结果（可以看着一个整体），只不过运算的结果就是b被赋值的值，也就是20。</p>
+<p>我们接着来看加减法，这个就和我们数学中的是一样的了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">5</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, a + b);   <span class="hljs-comment">//打印 a + b 的结果</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然也可以像数学中那样写在一个数或是变量的最前面，表示是正数：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = +<span class="hljs-number">10</span>, b = +<span class="hljs-number">5</span>;<br></code></pre></td></tr></table></figure>
+
+<p>不过默认情况下就是正数，所以没必要去写一个+号。减法运算符其实也是一样的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">5</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, a - b);   <span class="hljs-comment">//打印 a - b 的结果</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">-10</span>;   <span class="hljs-comment">//等于 -10</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, -a);   <span class="hljs-comment">//输出 -a 的值，就反着来嘛</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>接着我们来看看乘法和除法运算：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">20</span>, b = <span class="hljs-number">10</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d, %d&quot;</span>, a * b, a / b);   <span class="hljs-comment">//使用方式和上面的加减法是差不多的</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>还有一个比较有意思的取模运算：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">20</span>, b = <span class="hljs-number">8</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, a % b);   <span class="hljs-comment">//取模运算实际上就是计算a除以b的余数</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>不过很遗憾，在C中没有指数相关的运算符（比如要计算5的10次方），在后面学习了循环语句之后，我们可以尝试来自己实现一个指数运算。</p>
+<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p>和数学中一样，运算符是有优先级的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">#include &lt;stdio.h&gt;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>, b = <span class="hljs-number">10</span>;<br>    printf(<span class="hljs-string">&quot;%d&quot;</span>, a + a * b);   <span class="hljs-comment">//如果没有优先级，那么结果应该是400</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>很明显这里的结果是考虑了优先级的：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ytdqy91yj211o02wq2u.jpg" srcset="/img/loading.gif" lazyload alt="image-20220606205103154"></p>
+<p>在数学中，加减运算的优先级是没有乘除运算优先级高的，所以我们需要先计算那些乘除法，最后再来进行加减法的计算，而C语言中也是这样，运算符之间存在优先级概念。我们在数学中，如果需要优先计算加减法再计算乘除法，那么就需要使用括号来提升加减法的优先级，C语言也可以：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">20</span>, b = <span class="hljs-number">10</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, (a + a) * b);   <span class="hljs-comment">//优先计算 a + a 的结果，再乘以 b</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>那要是遇到多重的呢？类似于下面的这种：</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">数学上的写法：[<span class="hljs-number">1</span> - <span class="hljs-comment">(3 + 4)</span>] x <span class="hljs-comment">(-2 ÷ 1)</span> = ?<br></code></pre></td></tr></table></figure>
+
+<p>那么我们在C中就可以这样编写：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">#include &lt;stdio.h&gt;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    printf(<span class="hljs-string">&quot;%d&quot;</span>, (<span class="hljs-number">1</span> - (<span class="hljs-number">3</span> + <span class="hljs-number">4</span>)) * (-<span class="hljs-number">2</span> / <span class="hljs-number">1</span>));   <span class="hljs-comment">//其实写法基本差不多，只需要一律使用小括号即可</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这样，我们就可以通过<code>()</code>运算符，来提升运算优先级了。</p>
+<p>我们来总结一下，上面运算符优先级如下，从左往右依次递减：</p>
+<ul>
+<li><code>()</code>  &gt;   <code>+ - (做符号表示，比如-9)</code>  &gt;  <code>* / %</code>  &gt;  <code>+ - (做加减运算)</code>  &gt;  <code>=</code></li>
+</ul>
+<p>根据上面的优先级，我们来看看下面<code>a</code>的结果是什么：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> c;<br><span class="hljs-type">int</span> a = (<span class="hljs-number">3</span> + (c = <span class="hljs-number">2</span>)) * <span class="hljs-number">6</span>;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> b, c;<br><span class="hljs-type">int</span> a = (b = <span class="hljs-number">5</span>, c = b + <span class="hljs-number">8</span>);  <span class="hljs-comment">//逗号运算符从前往后依次执行，赋值结果是最后边的结果</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h3><p>我们可以快速使用自增运算符来将变量的值<code>+1</code>，正常情况下我们想要让一个变量值自增需要：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>a = a + <span class="hljs-number">1</span>;<br></code></pre></td></tr></table></figure>
+
+<p>现在我们只需要替换为：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>++a;   <span class="hljs-comment">//使用自增运算符，效果等价于 a = a + 1</span><br></code></pre></td></tr></table></figure>
+
+<p>并且它也是有结果的，除了做自增运算之外，它的结果是自增之后的值：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    <span class="hljs-comment">//int b = a = a + 1;  下面效果完全一致</span><br>    <span class="hljs-type">int</span> b = ++a;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, b);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然我们也可以将自增运算符写到后面，和写在前面的区别是，它是先返回当前变量的结果，再进行自增的，顺序是完全相反的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    <span class="hljs-type">int</span> b = a++;   <span class="hljs-comment">//写在后面和写在前面是有区别的</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %d, b = %d&quot;</span>, a, b);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>重点内容：自增运算符<code>++</code>在前，那么先自增再出结果；自增运算符<code>++</code>在后，那么先出结果再自增。各位小伙伴可以直接记运算符的位置，来方便记忆。</p>
+</blockquote>
+<p>那要是现在我们不想自增1而是自增2或是其他的数字呢？我们可以使用复合赋值运算符，正常情况下依然是使用普通的赋值运算符：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>a = a + <span class="hljs-number">5</span>;<br></code></pre></td></tr></table></figure>
+
+<p>但是现在我们可以简写：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>a += <span class="hljs-number">5</span>;<br></code></pre></td></tr></table></figure>
+
+<p>效果和上面是完全一样的，并且得到的结果也是在自增之后的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    <span class="hljs-type">int</span> b = a += <span class="hljs-number">5</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %d&quot;</span>, b);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>复合赋值运算符不仅仅支持加法，还支持各种各样的运算：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    a %= <span class="hljs-number">3</span>;   <span class="hljs-comment">//可以复合各种运算，比如加减乘除、模运算、包括我们我们还要讲到的位运算等</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %d&quot;</span>, a);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然，除了自增操作之外，还有自减操作：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    a--;   <span class="hljs-comment">//--是自减操作，相当于a = a - 1，也可以在前后写，规则和上面的自增是一样的</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %d&quot;</span>, a);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>注意自增自减运算符和<code>+</code>、<code>-</code>做符号是的优先级一样，仅次于<code>()</code>运算符，所以在编写时一定要注意：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    <span class="hljs-type">int</span> b = <span class="hljs-number">5</span> * --a;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;b = %d&quot;</span>, b);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>前面我们学习了乘法运算符<code>*</code>，当我们想要让一个变量的值变成2倍，只需要做一次乘法运算即可：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>a *= <span class="hljs-number">2</span>;  <span class="hljs-comment">//很明显算完之后a就是20了</span><br></code></pre></td></tr></table></figure>
+
+<p>但是我们现在可以利用位运算来快速进行计算：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>a = a &lt;&lt; <span class="hljs-number">1</span>;   <span class="hljs-comment">//也可以写成复合形式 a &lt;&lt;= 1</span><br></code></pre></td></tr></table></figure>
+
+<p>我们会发现这样运算之后得到的结果居然也是20，这是咋算出来的呢？实际上<code>&lt;&lt;</code>是让所有的bit位进行左移操作，上面就是左移1位，我们可以来看看：</p>
+<ul>
+<li>10  &#x3D;  00001010     现在所以bit位上的数据左移一位    00010100   &#x3D;   20</li>
+</ul>
+<p>是不是感觉特别神奇？就像我们在十进制中，做乘以10的操作一样：22乘以10那么就直接左移了一位变成220，而二进制也是一样的，如果让这些二进制数据左移的话，那么相当于在进行乘2的操作。</p>
+<p>比如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">6</span>;<br>    a = a &lt;&lt; <span class="hljs-number">2</span>;   <span class="hljs-comment">//让a左移2位，实际上就是 a * 2 * 2，a * 2的平方（类比十进制，其实还是很好理解的）</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %d&quot;</span>, a);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然能左移那肯定也可以右移：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">6</span>;<br>    a = a &gt;&gt; <span class="hljs-number">1</span>;   <span class="hljs-comment">//右移其实就是除以2的操作</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %d&quot;</span>, a);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然除了移动操作之外，我们也可以进行按位比较操作，先来看看按位与操作：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">6</span>, b = <span class="hljs-number">4</span>;<br>    <span class="hljs-type">int</span> c = a &amp; b;   <span class="hljs-comment">//按位与操作</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;c = %d&quot;</span>, c);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>按位与实际上也是根据每个bit位来进行计算的：</p>
+<ul>
+<li>4  &#x3D;  00000100</li>
+<li>6  &#x3D;  00000110</li>
+<li>按位与实际上就是让两个数的每一位都进行比较，如果两个数对应的bit位都是1，那么结果的对应bit位上就是1，其他情况一律为0</li>
+<li>所以计算结果为：00000100    &#x3D;    4</li>
+</ul>
+<p>除了按位与之外，还有按位或运算：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">6</span>, b = <span class="hljs-number">4</span>;<br><span class="hljs-type">int</span> c = a | b;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>4  &#x3D;  00000100</li>
+<li>6  &#x3D;  00000110</li>
+<li>按位与实际上也是让两个数的每一位都进行比较，如果两个数对应bit位上其中一个是1，那么结果的对应bit位上就是1，其他情况为0。</li>
+<li>所以计算结果为：00000110  &#x3D;  6</li>
+</ul>
+<p>还有异或和按位非（按位否定）：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a = <span class="hljs-number">6</span>, b = <span class="hljs-number">4</span>;<br><span class="hljs-type">int</span> c = a ^ b;    <span class="hljs-comment">//注意^不是指数运算，表示按位异或运算，让两个数的每一位都进行比较，如果两个数对应bit位上不同时为1或是同时为0，那么结果就是1，否则结果就是0，所以这里的结果就是2</span><br>a = ~a;   <span class="hljs-comment">//按位否定针对某个数进行操作，它会将这个数的每一个bit位都置反，0变成1，1变成0，猜猜会变成几</span><br></code></pre></td></tr></table></figure>
+
+<p>按位运算都是操作数据底层的二进制位来进行的。</p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>最后我们来看一下逻辑运算符，逻辑运算符主要用到下一节的流程控制语句中。</p>
+<p>逻辑运算符用于计算真和假，比如今天要么下雨要么不下雨，现在我们想要在程序中判断一下是否下雨了，这时就需要用到逻辑运算符，我们来举个例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    <span class="hljs-type">_Bool</span> c = a &lt; <span class="hljs-number">0</span>;    <span class="hljs-comment">//我们现在想要判断a的值是否小于0，我们可以直接使用小于符号进行判断，最后得到的结果只能是1或0</span><br>  	<span class="hljs-comment">//虽然结果是一个整数，但是这里推荐使用_Bool类型进行接收，它只能表示0和1（更加专业一些）</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;c = %d&quot;</span>, c);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>实际上在C语言中，0一般都表示为假，而非0的所有值（包括正数和负数）都表示为真，上面得到1表示真，0表示假。</p>
+<p>除了小于符号可以判断大小之外，还有：<code>&lt;</code>、<code> &lt;=</code>、<code>&gt;=</code>、<code>&gt;</code></p>
+<p>比如我们现在想要判断字符C是否为大写字母：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;D&#x27;</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;c是否为大写字母：%d&quot;</span>, c &gt;= <span class="hljs-string">&#x27;A&#x27;</span>);    <span class="hljs-comment">//由于底层存储的就是ASCII码，这里可以比较ASCII码，也可以写成字符的形式</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>但是我们发现，现在我们的判断只能判断一个条件，也就是说只能判断c是否是大于等于’A’的，但是不能同时判断c的值是否是小于等于’Z’的，所以这时，我们就需要利用逻辑与和逻辑或来连接两个条件了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;D&#x27;</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;c是否为大写字母：%d&quot;</span>, c &gt;= <span class="hljs-string">&#x27;A&#x27;</span> &amp;&amp; c &lt;= <span class="hljs-string">&#x27;Z&#x27;</span>);   <span class="hljs-comment">//使用&amp;&amp;表示逻辑与，逻辑与要求两边都是真，结果才是真</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>又比如现在我们希望判断c是否不是大写字母：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;D&#x27;</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;c是否不为大写字母：%d&quot;</span>, c &lt; <span class="hljs-string">&#x27;A&#x27;</span> || c &gt; <span class="hljs-string">&#x27;Z&#x27;</span>);   <span class="hljs-comment">//使用||表示逻辑或，只要两边其中一个为真或是都为真，结果就是真</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然我们也可以判断c是否为某个字母：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;D&#x27;</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;c是否为字母A：%d&quot;</span>, c == <span class="hljs-string">&#x27;A&#x27;</span>);    <span class="hljs-comment">//注意判断相等时使用==双等号</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>判断不相等也可以使用：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;c是否不为字母A：%d&quot;</span>, c != <span class="hljs-string">&#x27;A&#x27;</span>);<br></code></pre></td></tr></table></figure>
+
+<p>我们也可以对某个结果取反：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">20</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;i是否不小于20：%d&quot;</span>, !(i &lt; <span class="hljs-number">20</span>));   <span class="hljs-comment">//使用!来对结果取反，注意!优先级很高，一定要括起来，不然会直接对i生效</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这里要注意一下<code>!</code>如果直接作用于某个变量或是常量，那么会直接按照上面的规则（0表示假，非0表示真）非0一律转换为0，0一律转换为1。</p>
+<p>这里我们可以结合三目运算符来使用这些逻辑运算符：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">char</span> c = i &gt; <span class="hljs-number">10</span> ? <span class="hljs-string">&#x27;A&#x27;</span> : <span class="hljs-string">&#x27;B&#x27;</span>;    <span class="hljs-comment">//三目运算符格式为：expression ? 值1 : 值2，返回的结果会根据前面判断的结果来的</span><br>    <span class="hljs-comment">//这里是判断i是否大于10，如果大于那么c的值就是A，否则就是B</span><br>  	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, c);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>最后，我们来总结一下前面认识的所有运算符的优先级，从上往下依次降低：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>解释</th>
+<th>结合方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>()</td>
+<td>同数学中的括号，直接提升到最高优先级</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>! ~ ++ – + -</td>
+<td>否定，按位否定，增量，减量，正负号</td>
+<td>由右向左</td>
+</tr>
+<tr>
+<td>* &#x2F; %</td>
+<td>乘，除，取模</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>+ -</td>
+<td>加，减</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>&lt;&lt; &gt;&gt;</td>
+<td>左移，右移</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>&lt; &lt;&#x3D; &gt;&#x3D; &gt;</td>
+<td>小于，小于等于，大于等于，大于</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D; !&#x3D;</td>
+<td>等于，不等于</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>按位与</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>^</td>
+<td>按位异或</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>|</td>
+<td>按位或</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>逻辑与</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>||</td>
+<td>逻辑或</td>
+<td>由左向右</td>
+</tr>
+<tr>
+<td>? :</td>
+<td>条件</td>
+<td>由右向左</td>
+</tr>
+<tr>
+<td>&#x3D; +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D; &amp;&#x3D; ^&#x3D; |&#x3D; &lt;&lt;&#x3D; &gt;&gt;&#x3D;</td>
+<td>各种赋值</td>
+<td>由右向左</td>
+</tr>
+<tr>
+<td>,</td>
+<td>逗号（顺序）</td>
+<td>由左向右</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><p>前面我们学习了运算符，知道该如何使用运算符来计算我们想要的内容，但是仅仅依靠计算我们的程序还没办法实现丰富多样的功能，我们还得加点额外的控制操作。</p>
+<h3 id="分支语句-if"><a href="#分支语句-if" class="headerlink" title="分支语句 - if"></a>分支语句 - if</h3><p>我们可能会有这样的一个需求，就是判断某个条件，当满足此条件时，才执行某些代码，那这个时候该怎么办呢？我们可以使用<code>if</code>语句来实现：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">if</span>(i &gt; <span class="hljs-number">20</span>) &#123;    <span class="hljs-comment">//我们只希望i大于20的时候才执行下面的打印语句</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World!&quot;</span>);<br>    &#125;<br>  	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World?&quot;</span>);   <span class="hljs-comment">//后面的代码在if之外，无论是否满足if条件，都跟后面的代码无关，所以这里的代码任何情况下都会执行</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>if语句的标准格式如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">if</span>(判断条件) &#123;<br>    执行的代码<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然如果只需要执行一行代码的话，可以省略花括号：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">if</span>(判断条件)<br>  一行执行的代码   <span class="hljs-comment">//注意这样只有后一行代码生效，其他的算作if之外的代码了</span><br></code></pre></td></tr></table></figure>
+
+<p>现在我们需求升级了，我们需要判断某个条件，当满足此条件时，执行某些代码，而不满足时，我们想要执行另一段代码，我们就可以结合else语句来实现：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">if</span>(i &gt; <span class="hljs-number">20</span>) &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World!&quot;</span>);   <span class="hljs-comment">//满足if条件才执行</span><br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;LBWNB&quot;</span>);   <span class="hljs-comment">//不满足if条件才执行</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>但是这样可能还是不够用，比如我们现在希望判断学生的成绩，不同分数段打印的等级不一样，比如90以上就是优秀，70以上就是良好，60以上是及格，其他的都是不及格，那么这种我们又该如何判断呢？要像这样进行连续判断，我们需要使用<code>else-if</code>来完成：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> score =  <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(score &gt;= <span class="hljs-number">90</span>) &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;优秀&quot;</span>);<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">70</span>) &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;良好&quot;</span>);<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (score &gt;= <span class="hljs-number">60</span>)&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;及格&quot;</span>);<br>    &#125; <span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;不及格&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><code>if</code>这类的语句（包括我们下面还要介绍的三种）都是支持嵌套使用的，比如我们现在希望低于60分的同学需要补习，0-30分需要补Java，30-60分需要补C++，这时我们就需要用到嵌套：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> score =  <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(score &lt; <span class="hljs-number">60</span>) &#123;   <span class="hljs-comment">//先判断不及格</span><br>        <span class="hljs-keyword">if</span>(score &gt; <span class="hljs-number">30</span>) &#123;   <span class="hljs-comment">//在内层再嵌套一个if语句进行进一步的判断</span><br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;学习C++&quot;</span>);<br>        &#125; <span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;学习Java&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="分支语句-switch"><a href="#分支语句-switch" class="headerlink" title="分支语句 - switch"></a>分支语句 - switch</h3><p>前面我们介绍了if语句，我们可以通过一个if语句轻松地进行条件判断，然后根据对应的条件，来执行不同的逻辑，当然除了这种方式之外，我们也可以使用switch语句来实现，它更适用于多分支的情况：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">switch</span> (目标) &#123;   <span class="hljs-comment">//我们需要传入一个目标，比如变量，或是计算表达式等</span><br>  <span class="hljs-keyword">case</span> 匹配值:    <span class="hljs-comment">//如果目标的值等于我们这里给定的匹配值，那么就执行case后面的代码</span><br>    代码...<br>    <span class="hljs-keyword">break</span>;    <span class="hljs-comment">//代码执行结束后需要使用break来结束，否则会继续溜到下一个case继续执行代码</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>比如现在我们要根据学生的等级进行分班，学生有ABC三个等级：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;A&#x27;</span>;<br>    <span class="hljs-keyword">switch</span> (c) &#123;  <span class="hljs-comment">//这里目标就是变量c</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;A&#x27;</span>:    <span class="hljs-comment">//分别指定ABC三个匹配值，并且执行不同的代码</span><br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;去尖子班！准备冲刺985大学！&quot;</span>);<br>            <span class="hljs-keyword">break</span>;   <span class="hljs-comment">//执行完之后一定记得break，否则会继续向下执行下一个case中的代码</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;B&#x27;</span>:<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;去平行班！准备冲刺一本！&quot;</span>);<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;C&#x27;</span>:<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;去职高深造。&quot;</span>);<br>            <span class="hljs-keyword">break</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>switch可以精准匹配某个值，但是它不能进行范围判断，比如我们要判断分数段，这时用switch就很鸡肋了。</p>
+<p>当然除了精准匹配之外，其他的情况我们可以用default来表示：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">switch</span> (目标) &#123;<br>    <span class="hljs-keyword">case</span>: ...<br>    <span class="hljs-keyword">default</span>:<br>    		其他情况下执行的代码<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>比如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;A&#x27;</span>;<br>    <span class="hljs-keyword">switch</span> (c) &#123;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;A&#x27;</span>:<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;去尖子班！&quot;</span>);<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;B&#x27;</span>:<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;去平行班！&quot;</span>);<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;C&#x27;</span>:<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;去差生班！&quot;</span>);<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">default</span>:   <span class="hljs-comment">//其他情况一律就是下面的代码了</span><br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;去读职高，分流&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然switch中可以继续嵌套其他的流程控制语句，比如if：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> c = <span class="hljs-string">&#x27;A&#x27;</span>;<br>    <span class="hljs-keyword">switch</span> (c) &#123;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;A&#x27;</span>:<br>            <span class="hljs-keyword">if</span>(c == <span class="hljs-string">&#x27;A&#x27;</span>) &#123;    <span class="hljs-comment">//嵌套一个if语句</span><br>                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;去尖子班！&quot;</span>);<br>            &#125;<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;B&#x27;</span>:<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;去平行班！&quot;</span>);<br>            <span class="hljs-keyword">break</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="循环语句-for"><a href="#循环语句-for" class="headerlink" title="循环语句 - for"></a>循环语句 - for</h3><p>通过前面的学习，我们了解了如何使用分支语句来根据不同的条件执行不同的代码，我们接着来看第二种重要的流程控制语句，循环语句。</p>
+<p>我们在某些时候，可能需要批量执行某些代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;伞兵一号卢本伟准备就绪！&quot;</span>);   <span class="hljs-comment">//把这句话给我打印三遍</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;伞兵一号卢本伟准备就绪！&quot;</span>);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;伞兵一号卢本伟准备就绪！&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>遇到这种情况，我们由于还没学习循环语句，那么就只能写N次来实现这样的多次执行。现在我们可以使用for循环语句来多次执行：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">for</span> (表达式<span class="hljs-number">1</span>表达式<span class="hljs-number">2</span>;表达式<span class="hljs-number">3</span>) &#123;<br>    循环体<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>我们来介绍一下：</p>
+<ul>
+<li>表达式1：在循环开始时仅执行一次。</li>
+<li>表达式2：每次循环开始前会执行一次，要求为判断语句，用于判断是否可以结束循环，若结果为真，那么继续循环，否则结束循环。</li>
+<li>表达式3：每次循环完成后会执行一次。</li>
+<li>循环体：每次循环都会执行循环体里面的内容，直到循环结束。</li>
+</ul>
+<p>一个标准的for循环语句写法如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//比如现在我们希望循环4次</span><br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; ++i) &#123;<br>    <span class="hljs-comment">//首先定义一个变量i用于控制循环结束</span><br>  	<span class="hljs-comment">//表达式2在循环开始之前判断是否小于4</span><br>  	<span class="hljs-comment">//表达式3每次循环结束都让i自增一次，这样当自增4次之后不再满足条件，循环就会结束，正好4次循环</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>我们来看看按顺序打印的结果：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-comment">//比如现在我们希望循环4次</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; ++i) &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d, &quot;</span>, i);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h34bzvoslpj2136030aa3.jpg" srcset="/img/loading.gif" lazyload alt="image-20220611152257585"></p>
+<p>这样，利用循环我们就可以批量执行各种操作了。</p>
+<p>注意，如果表达式2我们什么都不写，那么会默认判定为真：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; ; ++i) &#123;   <span class="hljs-comment">//表达式2不编写任何内容，默认为真，这样的话循环永远都不会结束</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d, &quot;</span>, i);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/AHoTpOIEYu8Jc7R.jpg" srcset="/img/loading.gif" lazyload alt="image-20220612164349847"></p>
+<p>所以，如果我们想要编写一个无限循环，其实什么都不用写就行了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-keyword">for</span> (;;) &#123;   <span class="hljs-comment">//什么都不写直接无限循环，但是注意，两个分号还是要写的</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World!\n&quot;</span>);   <span class="hljs-comment">//这里用到了\n表示换行</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然，我们也可以在循环过程中提前终止或是加速循环的进行，这里我们需要认识两个新的关键字：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; ++i) &#123;<br>    <span class="hljs-keyword">if</span>(i == <span class="hljs-number">5</span>) <span class="hljs-keyword">break</span>;   <span class="hljs-comment">//比如现在我们希望在满足某个条件下提前终止循环，可以使用break关键字来跳出循环</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, i);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/vW37gTywX92AI1r.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613101128788"></p>
+<p>可以看到，当满足条件时，会直接通过break跳出循环，循环不再继续下去，直接结束掉。</p>
+<p>我们也可以加速循环：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; ++i) &#123;<br>    <span class="hljs-keyword">if</span>(i == <span class="hljs-number">5</span>) <span class="hljs-keyword">continue</span>;   <span class="hljs-comment">//使用continue关键字会加速循环，无论后面有没有未执行完的代码，都会直接开启下一轮循环</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, i);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/WeHJkqmEfGcn53r.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613101847762"></p>
+<p>虽然使用break和continue关键字能够更方便的控制循环，但是注意在多重循环嵌套下，它只对离它最近的循环生效（就近原则）：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">4</span>; ++i) &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt; <span class="hljs-number">4</span>; ++j) &#123;<br>        <span class="hljs-keyword">if</span>(i == j) <span class="hljs-keyword">continue</span>;    <span class="hljs-comment">//当i == j时加速循环</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d, %d\n&quot;</span>, i, j);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/Kh9U3l7rEqtGuQ1.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613102100374"></p>
+<p>可以看到，continue仅仅加速的是内层循环，而对外层循环没有任何效果，同样的，break也只会终结离它最近的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">4</span>; ++i) &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt; <span class="hljs-number">4</span>; ++j) &#123;<br>        <span class="hljs-keyword">if</span>(i == j) <span class="hljs-keyword">break</span>;    <span class="hljs-comment">//当i == j时终止循环</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d, %d\n&quot;</span>, i, j);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/6TaNChfX9tI351r.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613102347086"></p>
+<h3 id="循环语句-while"><a href="#循环语句-while" class="headerlink" title="循环语句 - while"></a>循环语句 - while</h3><p>前面我们介绍了for循环语句，我们接着来看第二种while循环，for循环要求我们填写三个表达式，而while相当于是一个简化版本，它只需要我们填写循环的维持条件即可，比如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) &#123;   <span class="hljs-comment">//每次循环开始之前都会判断括号内的内容是否为真，如果是就继续循环</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World!\n&quot;</span>);   <span class="hljs-comment">//这里会无限循环</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>相比for循环，while循环更多的用在不明确具体的结束时机的情况下，而for循环更多用于明确知道循环的情况，比如我们现在明确要进行循环10次，此时用for循环会更加合适一些，又比如我们现在只知道当<code>i</code>大于10时需要结束循环，但是<code>i</code>在循环多少次之后才不满足循环条件我们并不知道，此时使用while就比较合适了。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">100</span>;   <span class="hljs-comment">//比如现在我们想看看i不断除以2得到的结果会是什么，但是循环次数我们并不明确</span><br>    <span class="hljs-keyword">while</span> (i &gt; <span class="hljs-number">0</span>) &#123;   <span class="hljs-comment">//现在唯一知道的是循环条件，只要大于0那么就可以继续除</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d, &quot;</span>, i);<br>        i /= <span class="hljs-number">2</span>;   <span class="hljs-comment">//每次循环都除以2</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/xBE3NKZipVqJwjP.jpg" srcset="/img/loading.gif" lazyload alt="image-20220612170911315"></p>
+<p>while也支持使用break和continue来进行循环的控制：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> i = <span class="hljs-number">100</span>;<br><span class="hljs-keyword">while</span> (i &gt; <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-keyword">if</span>(i &lt; <span class="hljs-number">30</span>) <span class="hljs-keyword">break</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d, &quot;</span>, i);<br>    i /= <span class="hljs-number">2</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h36er98fx8j213002u0sy.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613102935994"></p>
+<p>我们可以反转循环判断的位置，可以先执行循环内容，然后再做循环条件判断，这里要用到<code>do-while</code>语句：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-keyword">do</span> &#123;  <span class="hljs-comment">//无论满不满足循环条件，先执行循环体里面的内容</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World!&quot;</span>);<br>    &#125; <span class="hljs-keyword">while</span> (<span class="hljs-number">0</span>);   <span class="hljs-comment">//再做判断，如果判断成功，开启下一轮循环，否则结束</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/clJF7jrBqWAtbZ4.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613103504978"></p>
+<h3 id="实战：寻找水仙花数"><a href="#实战：寻找水仙花数" class="headerlink" title="实战：寻找水仙花数"></a>实战：寻找水仙花数</h3><blockquote>
+<p>“水仙花数（Narcissistic number）也被称为超完全数字不变数（pluperfect digital invariant, PPDI）、自恋数、自幂数、阿姆斯壮数或阿姆斯特朗数（Armstrong number），水仙花数是指<strong>一个 3 位数，它的每个位上的数字的 3次幂之和等于它本身。</strong>例如：1^3 + 5^3+ 3^3 &#x3D; 153。”</p>
+</blockquote>
+<p>现在请你设计一个C语言程序，打印出所有1000以内的水仙花数。</p>
+<h3 id="实战：打印九九乘法表"><a href="#实战：打印九九乘法表" class="headerlink" title="实战：打印九九乘法表"></a>实战：打印九九乘法表</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h36fd08zh4j21dk0bmq4j.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613105029975"></p>
+<p>现在我们要做的是在我们的程序中，也打印出这样的一个乘法表出来，请你设计一个C语言程序来实现它。</p>
+<p><img src="https://s2.loli.net/2022/06/17/BW7lvFXy4GRb1P5.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613105519595"></p>
+<h3 id="实战：斐波那契数列解法其一"><a href="#实战：斐波那契数列解法其一" class="headerlink" title="实战：斐波那契数列解法其一"></a>实战：斐波那契数列解法其一</h3><blockquote>
+<p>斐波那契数列（Fibonacci sequence），又称<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BB%84%E9%87%91%E5%88%86%E5%89%B2/115896">黄金分割</a>数列，因数学家莱昂纳多·斐波那契（Leonardo Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”，指的是这样一个数列：<strong>1、1、2、3、5、8、13、21、34、……</strong>在数学上，斐波那契数列以如下被以递推的方法定义：<em>F</em>(0)&#x3D;0，<em>F</em>(1)&#x3D;1, <em>F</em>(n)&#x3D;<em>F</em>(n - 1)+<em>F</em>(n - 2)（<em>n</em> ≥ 2，<em>n</em> ∈ N*）在现代物理、准<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%99%B6%E4%BD%93%E7%BB%93%E6%9E%84/10401467">晶体结构</a>、化学等领域，斐波纳契数列都有直接的应用，为此，美国数学会从 1963 年起出版了以《斐波纳契数列季刊》为名的一份数学杂志，用于专门刊载这方面的研究成果。</p>
+</blockquote>
+<p>斐波那契数列：1，1，2，3，5，8，13，21，34，55，89…，不难发现一个规律，实际上从第三个数开始，每个数字的值都是前两个数字的和，现在请你设计一个C语言程序，可以获取斐波那契数列上任意一位的数字，比如获取第5个数，那么就是5。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> target = <span class="hljs-number">7</span>, result;  <span class="hljs-comment">//target是要获取的数，result是结果</span><br><br>    <span class="hljs-comment">//请在这里实现算法</span><br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, result);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>现在我们有一个新的需求，我们需要存储2022年每个月都天数，那么此时，为了保存这12个月的天数，我们就得创建12个变量：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> january = <span class="hljs-number">31</span>, february = <span class="hljs-number">28</span>, march = <span class="hljs-number">31</span> ...<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这样是不是太累了点？万一我们想保存100个商品的售价，那岂不是得创建100个变量？这肯定不行啊。</p>
+<h3 id="数组的创建和使用"><a href="#数组的创建和使用" class="headerlink" title="数组的创建和使用"></a>数组的创建和使用</h3><p>为了解决这种问题，我们可以使用数组，什么是数组呢？简单来说，就是存放数据的一个组，所有的数据都统一存放在这一个组中，一个数组可以同时存放多个数据。比如现在我们想保存12个月的天数，那么我们只需要创建一个int类型的数组就可以了，它可以保存很多个int类型的数据，这些保存在数组中的数据，称为“元素”：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> arr[<span class="hljs-number">12</span>] = &#123;<span class="hljs-number">31</span>, <span class="hljs-number">28</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>&#125;;  <span class="hljs-comment">//12个月的数据全部保存在了一起</span><br></code></pre></td></tr></table></figure>
+
+<p>可以看到，数组的定义方式也比较简单：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">类型 数组名称[数组大小] = &#123;数据<span class="hljs-number">1</span>, 数据<span class="hljs-number">2.</span>..&#125;;  <span class="hljs-comment">//后面的数据可以在一开始的时候不赋值，并且数组大小必须是整数</span><br></code></pre></td></tr></table></figure>
+
+<p>注意数组只能存放指定类型的数据，一旦确定是不能更改的，因为数组声明后，会在内存中开辟一块连续的区域，来存放这些数据，所以类型和长度必须在一开始就明确。</p>
+<p><img src="https://s2.loli.net/2022/06/17/ESJ5WmydXrxfwsU.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613113423268"></p>
+<p>创建数组的方式有很多种：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> a[<span class="hljs-number">10</span>];   <span class="hljs-comment">//直接声明int类型数组，容量为10</span><br><br><span class="hljs-type">int</span> b[<span class="hljs-number">10</span>] = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>&#125;;   <span class="hljs-comment">//声明后，可以赋值初始值，使用&#123;&#125;囊括，不一定需要让10个位置都有初始值，比如这里仅仅是为前三个设定了初始值，注意，跟变量一样，如果不设定初始值，数组内的数据并不一定都是0</span><br><br><span class="hljs-type">int</span> c[<span class="hljs-number">10</span>] = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">4</span>] = <span class="hljs-number">777</span>, [<span class="hljs-number">9</span>] = <span class="hljs-number">666</span>&#125;; <span class="hljs-comment">//我们也可以通过 [下标] = 的形式来指定某一位的初始值，注意下标是从0开始的，第一个元素就是第0个下标位置，比如这里数组容量为10，那么最多到9</span><br><br><span class="hljs-type">int</span> c[] = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;  <span class="hljs-comment">//也可以根据后面的赋值来决定数组长度</span><br></code></pre></td></tr></table></figure>
+
+<p>基本类型都可以声明数组：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> str[] = &#123;<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;C&#x27;</span>&#125;;   <span class="hljs-comment">//多个字符</span><br><br>    <span class="hljs-type">char</span> str2[] = <span class="hljs-string">&quot;ABC&quot;</span>;  <span class="hljs-comment">//实际上字符串就是多个字符的数组形式，有关字符串我们会在下一节进行讲解</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>那么数组定义好了，如何去使用它呢？比如我们现在需要打印12个月的天数：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> arr[<span class="hljs-number">12</span>] = &#123;<span class="hljs-number">31</span>, <span class="hljs-number">28</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>&#125;;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">12</span>; ++i) &#123;<br>        <span class="hljs-type">int</span> days = arr[i];   <span class="hljs-comment">//直接通过数组 名称[下标] 来访问对应的元素值，再次提醒，下标是从0开始的，不是1</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;2022年 %d 月的天数是：%d 天\n&quot;</span>, (i + <span class="hljs-number">1</span>), days);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h36h0hctkdj21b204w0t5.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613114739872"></p>
+<p>当然我们也可以对数组中的值进行修改：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> arr[] = &#123;<span class="hljs-number">666</span>, <span class="hljs-number">777</span>, <span class="hljs-number">888</span>&#125;;<br>    arr[<span class="hljs-number">1</span>] = <span class="hljs-number">999</span>;   <span class="hljs-comment">//比如我们现在想要让第二个元素的值变成999</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, arr[<span class="hljs-number">1</span>]);   <span class="hljs-comment">//打印一下看看是不是变成了999</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/Q4bnsaIyz7NXReF.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613114928435"></p>
+<p>注意，和变量一样，如果只是创建数组但是不赋初始值的话，因为是在内存中随机申请的一块空间，有可能之前其他地方使用过，保存了一些数据，所以数组内部的元素值并不一定都是0：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> arr[<span class="hljs-number">10</span>];<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; ++i) &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d, &quot;</span>, arr[i]);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/63BLiUNexSjJgym.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613115108971"></p>
+<p>不要尝试去访问超出数组长度位置的数据，虽然可以编译通过，但是会给警告，这些数据是毫无意义的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> arr[] = &#123;<span class="hljs-number">111</span>, <span class="hljs-number">222</span>, <span class="hljs-number">333</span>&#125;;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, arr[<span class="hljs-number">3</span>]);  <span class="hljs-comment">//不能去访问超出数组长度的元素，很明显这里根本就没有第四个元素</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><p>数组不仅仅只可以有一个维度，我们可以创建二维甚至多维的数组，简单来说就是，存放数组的数组（套娃了属于是）：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> arr[][<span class="hljs-number">2</span>] = &#123;&#123;<span class="hljs-number">20</span>, <span class="hljs-number">10</span>&#125;, &#123;<span class="hljs-number">18</span>, <span class="hljs-number">9</span>&#125;&#125;;   <span class="hljs-comment">//可以看到，数组里面存放的居然是数组</span><br><span class="hljs-comment">//存放的内层数组的长度是需要确定的，存放数组的数组和之前一样，可以根据后面的值决定</span><br></code></pre></td></tr></table></figure>
+
+<p>比如现在我们要存放2020-2022年每个月的天数，那么此时用一维数组肯定是不方便了，我们就可以使用二维数组来处理：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> arr[<span class="hljs-number">3</span>][<span class="hljs-number">12</span>] = &#123;&#123;<span class="hljs-number">31</span>, <span class="hljs-number">29</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>&#125;, <span class="hljs-comment">//2020年是闰年，2月有29天</span><br>                  &#123;<span class="hljs-number">31</span>, <span class="hljs-number">28</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>&#125;,<br>                  &#123;<span class="hljs-number">31</span>, <span class="hljs-number">28</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>&#125;&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>这样，我们就通过二维数组将这三年每个月的天数都保存下来了。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h36hpql8tpj211s05w3yp.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613121156024"></p>
+<p>那么二维数组又该如何去访问呢？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> arr[<span class="hljs-number">3</span>][<span class="hljs-number">12</span>] = &#123;&#123;<span class="hljs-number">31</span>, <span class="hljs-number">29</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>&#125;, <span class="hljs-comment">//2020年是闰年，2月有29天</span><br>                      &#123;<span class="hljs-number">31</span>, <span class="hljs-number">28</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>&#125;,<br>                      &#123;<span class="hljs-number">31</span>, <span class="hljs-number">28</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>&#125;&#125;;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, arr[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>]);   <span class="hljs-comment">//比如现在我们想要获取2020年2月的天数，首先第一个是[0]表示存放的第一个数组，第二个[1]表示数组中的第二个元素</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然除了二维还可以上升到三维、四维：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> arr[<span class="hljs-number">2</span>][<span class="hljs-number">2</span>][<span class="hljs-number">2</span>] = &#123;&#123;&#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>&#125;, &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>&#125;&#125;, &#123;&#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>&#125;, &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>&#125;&#125;&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>有关多维数组，暂时先介绍到这里。</p>
+<h3 id="实战：冒泡排序算法"><a href="#实战：冒泡排序算法" class="headerlink" title="实战：冒泡排序算法"></a>实战：冒泡排序算法</h3><p>现在有一个int数组，但是数组内的数据是打乱的，现在请你通过C语言，实现将数组中的数据按<strong>从小到大</strong>的顺序进行排列：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> arr[<span class="hljs-number">10</span>] = &#123;<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">4</span>&#125;;  <span class="hljs-comment">//乱序的</span><br>    <span class="hljs-comment">//请编写代码对以上数组进行排序</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这里我们使用冒泡排序算法来实现，此算法的核心思想是：</p>
+<ul>
+<li>假设数组长度为N</li>
+<li>进行N轮循环，每轮循环都选出一个最大的数放到后面。</li>
+<li>每次循环中，从第一个数开始，让其与后面的数两两比较，如果更大，就交换位置，如果更小，就不动。</li>
+</ul>
+<p>动画演示：<a target="_blank" rel="noopener" href="https://visualgo.net/zh/sorting?slide=2-2">https://visualgo.net/zh/sorting?slide=2-2</a></p>
+<h3 id="实战：斐波那契数列解法其二"><a href="#实战：斐波那契数列解法其二" class="headerlink" title="实战：斐波那契数列解法其二"></a>实战：斐波那契数列解法其二</h3><p>学习了数组，我们来看看如何利用数组来计算斐波那契数列，这里采用动态规划的思想。</p>
+<blockquote>
+<p>动态规划算法通常用于求解具有某种最优性质的问题。在这类问题中，可能会有许多可行解。每一个解都对应于一个值，我们希望找到具有<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E4%BC%98%E5%80%BC">最优值</a>的解。动态规划算法与<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%88%86%E6%B2%BB%E6%B3%95">分治法</a>类似，其基本思想也是将待求解问题分解成若干个子问题，先求解子问题，然后从<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%BF%99%E4%BA%9B%E5%AD%90">这些子</a>问题的解得到原问题的解。</p>
+</blockquote>
+<p>我们可以在一开始创建一个数组，然后从最开始的条件不断向后推导，从斐波那契数列的规律我们可以得知：</p>
+<ul>
+<li><code>fib[i] = fib[i - 1] + fib[i - 2]</code>（这里<code>fib</code>代表斐波那契数列）</li>
+</ul>
+<p>得到这样的一个关系（递推方程）就好办了，我们要求解数列第<code>i</code>个位置上的数，只需要知道<code>i - 1</code>和<code>i - 2</code>的值即可，这样，一个大问题，就分成了两个小问题，比如现在我们要求解斐波那契数列的第5个元素：</p>
+<ul>
+<li><code>fib[4] = fib[3] + fib[2]</code>现在我们只需要知道<code>fib[3]</code>和<code>fib[2]</code>即可，那么我们接着来看：</li>
+<li><code>fib[3] = fib[2] + fib[1]</code>以及<code>fib[2] = fib[1] + fib[0]</code></li>
+<li>由于<code>fib[0]</code>和<code>fib[1]</code>我们已经明确知道是<code>1</code>了，那么现在问题其实已经有结果了，把这些小问题的结果组合起来不就能得到原来大问题的结果了吗？</li>
+</ul>
+<p>现在请你设计一个C语言程序，利用动态规划的思想解决斐波那契数列问题。</p>
+<h3 id="实战：打家劫舍"><a href="#实战：打家劫舍" class="headerlink" title="实战：打家劫舍"></a>实战：打家劫舍</h3><p>我们继续通过一道简单的算法题来强化动态规划思想。</p>
+<p><strong>来源：力扣（LeetCode）No.198 打家劫舍</strong>：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/house-robber/">https://leetcode.cn/problems/house-robber/</a></p>
+<blockquote>
+<p>你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。</p>
+<p>给定一个代表每个房屋存放金额的非负整数数组，计算你 <strong>不触动警报装置的情况下</strong> ，一夜之内能够偷窃到的最高金额。</p>
+</blockquote>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p>输入：[1,2,3,1]<br>输出：4<br>解释：偷窃 1 号房屋 (金额 &#x3D; 1) ，然后偷窃 3 号房屋 (金额 &#x3D; 3)。<br>           偷窃到的最高金额 &#x3D; 1 + 3 &#x3D; 4 。</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p>输入：[2,7,9,3,1]<br>输出：12<br>解释：偷窃 1 号房屋 (金额 &#x3D; 2), 偷窃 3 号房屋 (金额 &#x3D; 9)，接着偷窃 5 号房屋 (金额 &#x3D; 1)。<br>           偷窃到的最高金额 &#x3D; 2 + 9 + 1 &#x3D; 12 。</p>
+</blockquote>
+<p><img src="https://s2.loli.net/2022/06/17/WvZltqPwyUEhkJY.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613124415156"></p>
+<p>这道题我们也可以很轻松地按照上面的动态规划思路来处理，首先我们可以将问题分为子问题，比如现在有<code>[2,7,9,3,1]</code>五个房屋，这个问题看起来比较复杂，我们不妨先将大问题先简化成小问题，我们来看看只有N个房屋的情况：</p>
+<ul>
+<li>假设现在只有<code>[2]</code>这一个房屋，那么很明显，我可以直接去偷一号房，得到2块钱，所以当有一个房子时最大能偷到2块钱。</li>
+<li>假设现在有<code>[2, 7]</code>这两个房屋，那么很明显，我可以直接去偷二号房，得到7块钱，所以当有两个房子时最大能偷到7块钱。</li>
+<li>假设现在只有<code>[2, 7, 9]</code>这三个房屋，我们就要来看看了，是先偷一号房再偷三号房好，还是只偷二号房好，根据前面的结论，如果我们偷了一号房，那么就可以继续偷三号房，并且得到的钱就是从一号房过来的钱+三号房的钱，也就是2+9块钱，但是如果只偷二号房的话，那么就只能得到7块钱，所以，三号房能够偷到的最大金额有以下关系（dp是我们求出的第i个房屋的最大偷钱数量，value表示房屋价值，max表示取括号中取最大的一个）：<ul>
+<li><code>dp[i] = max(dp[i - 1], dp[i - 2] + value[i])</code>  -&gt; <strong>递推方程已得到</strong></li>
+</ul>
+</li>
+<li>这样就不难求出：<code>dp[2] = max(dp[1], dp[0] + value[i])</code> &#x3D; <code>dp[2] = max(7, 2 + 9)</code> &#x3D; <code>dp[2] = 11</code>，所以有三个房屋时最大的金额是11块钱。</li>
+<li>所以，实际上我们只需要关心前面计算出来的盗窃最大值即可，而不需要关心前面到底是怎么在偷。</li>
+<li>我们以同样的方式来计算四个房屋<code>[2, 7, 9, 3]</code>的情况：<ul>
+<li><code>dp[3] = max(dp[2], dp[1] + value[3])</code> &#x3D; <code>dp[3] = max(11, 7 + 3)</code> &#x3D; <code>dp[3] = 11</code></li>
+</ul>
+</li>
+<li>所以，当有四个房屋时，我们依然采用先偷一后偷三的方案，不去偷四号，得到最大价值11块钱。</li>
+</ul>
+<p>好了，现在思路已经出来了，我们直接上算法吧，现在请你实现下面的C语言程序：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> arr[] = &#123;<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>&#125;, size = <span class="hljs-number">5</span>, result;<br><br>    <span class="hljs-comment">//请补充程序</span><br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, result);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>力扣提交，建议各位小伙伴学习了函数和指针之后再回来看看，这里暂时可以跳过。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h36jb2k9ldj20yy06kq3h.jpg" srcset="/img/loading.gif" lazyload alt="image-20220613130702396"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">max</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> &#123;<br>    <span class="hljs-keyword">return</span> a &gt; b ? a : b;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">rob</span><span class="hljs-params">(<span class="hljs-type">int</span>* nums, <span class="hljs-type">int</span> numsSize)</span>&#123;<br>    <span class="hljs-keyword">if</span>(numsSize == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">if</span>(numsSize == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> nums[<span class="hljs-number">0</span>];<br>    <span class="hljs-keyword">if</span>(numsSize == <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> max(nums[<span class="hljs-number">1</span>], nums[<span class="hljs-number">0</span>]);<br><br>    <span class="hljs-type">int</span> dp[numsSize];<br>    dp[<span class="hljs-number">0</span>] = nums[<span class="hljs-number">0</span>];<br>    dp[<span class="hljs-number">1</span>] = max(nums[<span class="hljs-number">1</span>], nums[<span class="hljs-number">0</span>]);<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt; numsSize; ++i) &#123;<br>        dp[i] = max(dp[i - <span class="hljs-number">1</span>], dp[i - <span class="hljs-number">2</span>] + nums[i]);<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> dp[numsSize - <span class="hljs-number">1</span>];<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>前面我们学习了数组，而对于字符类型的数组，比较特殊，它实际上可以作为一个字符串（String）表示，字符串就是一个或多个字符的序列，比如我们在一开始认识的<code>&quot;Hello World!&quot;</code>，像这样的多个字符形成的一连串数据，就是一个字符串，而<code>printf</code>函数接受的第一个参数也是字符串。</p>
+<p>那么，我们就来认识一下字符串。</p>
+<h3 id="字符串的创建和使用"><a href="#字符串的创建和使用" class="headerlink" title="字符串的创建和使用"></a>字符串的创建和使用</h3><p>在C语言中并没有直接提供存储字符串的类型，我们熟知的能够存储字符的只有char类型，但是它只能存储单个字符，而一连串的字符想要通过变量进行保存，那么就只能依靠数组了，char类型的数组允许我们存放多个字符，这样的话就可以表示字符串了。</p>
+<p>比如我们现在想要存储<code>Hello</code>这一连串字符：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> str[] = &#123;<span class="hljs-string">&#x27;H&#x27;</span>, <span class="hljs-string">&#x27;e&#x27;</span>, <span class="hljs-string">&#x27;l&#x27;</span>, <span class="hljs-string">&#x27;l&#x27;</span>, <span class="hljs-string">&#x27;o&#x27;</span>, <span class="hljs-string">&#x27;\0&#x27;</span>&#125;;  <span class="hljs-comment">//直接保存单个字符，但是注意，无论内容是什么，字符串末尾必须添加一个‘\0’字符（ASCII码为0）表示结束。</span><br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, str);   <span class="hljs-comment">//用%s来作为一个字符串输出</span><br></code></pre></td></tr></table></figure>
+
+<p>不过这样写起来实在是太麻烦了，我们可以使用更加简便的写法：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;Hello&quot;</span>;   <span class="hljs-comment">//直接使用双引号将所有的内容囊括起来，并且也不需要补充\0（但是本质上是和上面一样的字符数组）</span><br><span class="hljs-comment">//也可以添加 const char str[] = &quot;Hello World!&quot;; 双引号囊括的字符串实际上就是一个const char数组类型的值</span><br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, str);<br></code></pre></td></tr></table></figure>
+
+<p>这下终于明白了，原来我们一直在写的双引号，其实表示的就是一个字符串。</p>
+<p>那么现在请各位小伙伴看看下面的写法有什么不同：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-string">&quot;c&quot;</span><br><span class="hljs-string">&#x27;c&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>我们发现一个问题，char类型只能保存ASCII编码表中的字符，但是我们发现实际上中文也是可以正常打印的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;你这瓜保熟吗&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/06/17/jC9Vn4MbgOzt7LB.jpg" srcset="/img/loading.gif" lazyload alt="image-20220616114344138"></p>
+<p>这是什么情况？那么多中文字符（差不多有6000多个），用ASCII编码表那128个肯定是没办法全部表示的，但是我们现在需要在电脑中使用中文。这时，我们就需要扩展字符集了。</p>
+<blockquote>
+<p>我们可以使用两个甚至多个字节来表示一个中文字符，这样我们能够表示的数量就大大增加了，GB2132方案规定当连续出现两个大于127的字节时（注意不考虑符号位，此时相当于是第一个bit位一直为1了），表示这是一个中文字符（所以为什么常常有人说一个英文字符占一字节，一个中文字符占两个字节），这样我们就可以表示出超过7000种字符了，不仅仅是中文，甚至中文标点、数学符号等，都可以被正确的表示出来。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-number">10000011</span> <span class="hljs-number">10000110</span>   <span class="hljs-comment">//这就是一个连续出现都大于127的字节（注意这里是不考虑符号位的）</span><br></code></pre></td></tr></table></figure>
+
+<p>不过这样能够表示的内容还是不太够，除了那些常见的汉字之外，还有很多的生僻字，比如龘、錕、釿、拷这类的汉字，后来干脆直接只要第一个字节大于127，就表示这是一个汉字的开始，无论下一个字节是什么内容（甚至原来的128个字符也被编到新的表中），这就是Windows至今一直在使用的默认GBK编码格式。</p>
+<p>虽然这种编码方式能够很好的解决中文无法表示的问题，但是由于全球还有很多很多的国家以及很多很多种语言，所以我们的最终目标是能够创造一种可以表示全球所有字符的编码方式，整个世界都使用同一种编码格式，这样就可以同时表示全球的语言了。所以这时就出现了一个叫做ISO的（国际标准化组织）组织，来定义一套编码方案来解决所有国家的编码问题，这个新的编码方案就叫做Unicode，规定每个字符必须使用俩个字节，即用16个bit位来表示所有的字符（也就是说原来的那128个字符也要强行用两位来表示）</p>
+<p>但是这样的话实际上是很浪费资源的，因为这样很多字符都不会用到两字节来保存，但是又得这样去表示，这就导致某些字符浪费了很多空间。所以最后就有了UTF-8编码格式，区分每个字符的开始是根据字符的高位字节来区分的，比如用一个字节表示的字符，第一个字节高位以“0”开头；用两个字节表示的字符，第一个字节的高位为以“110”开头，后面一个字节以“10开头”；用三个字节表示的字符，第一个字节以“1110”开头，后面俩字节以“10”开头；用四个字节表示的字符，第一个字节以“11110”开头，后面的三个字节以“10”开头：</p>
+<table>
+<thead>
+<tr>
+<th>Unicode符号范围（十六进制）</th>
+<th>UTF-8编码方式(二进制)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0000 0000 ~ 0000 007F</td>
+<td>0xxxxxxx</td>
+</tr>
+<tr>
+<td>0000 0080 ~ 0000 07FF</td>
+<td>110xxxxx 10xxxxxx</td>
+</tr>
+<tr>
+<td>0000 0800 ~ 0000 FFFF</td>
+<td>1110xxxx 10xxxxxx 10xxxxxx</td>
+</tr>
+<tr>
+<td>0001 0000 ~ 0010 FFFF</td>
+<td>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</td>
+</tr>
+</tbody></table>
+<p>所以如果我们的程序需要表示多种语言，最好采用UTF-8编码格式。</p>
+</blockquote>
+<p>简而言之，我们的中文实际上是依靠多个char来进行表示的。</p>
+<p><img src="https://s2.loli.net/2022/06/17/yJjkVABhZCa5Dx2.jpg" srcset="/img/loading.gif" lazyload alt="image-20220616134302528"></p>
+<p><img src="https://s2.loli.net/2022/06/17/ckD2LWU7MlfSTtb.jpg" srcset="/img/loading.gif" lazyload alt="image-20220616134330805"></p>
+<p>这样，我们就了解了字符串的使用。</p>
+<h3 id="scanf、gets、puts函数"><a href="#scanf、gets、puts函数" class="headerlink" title="scanf、gets、puts函数"></a>scanf、gets、puts函数</h3><p>函数我们会在下一章详细介绍，不过这里还是要再提到一个比较重要的函数。</p>
+<p>前面我们认识了<code>printf</code>函数，实际上这个函数就是用于打印字符串到控制台，我们只需要填入一个字符串和后续的参数即可。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">const</span> <span class="hljs-type">char</span> str[] = <span class="hljs-string">&quot;Hello World!&quot;</span>;   <span class="hljs-comment">//注意printf需要填写一个const char数组进去，也就是字符串</span><br>    <span class="hljs-built_in">printf</span>(str);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>现在我们知道该如何输出，那么输入该如何实现呢，比如我们现在希望将我们想要说的话告诉程序，让程序从控制台读取我们输入的内容，这时我们就需要使用到<code>scanf</code>函数了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> str[<span class="hljs-number">10</span>];<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>, str);   <span class="hljs-comment">//使用scanf函数来接受控制台输入，并将输入的结果按照格式，分配给后续的变量</span><br>  	<span class="hljs-comment">//比如这里我们想要输入一个字符串，那么依然是使用%s（和输出是一样的占位符），后面跟上我们要赋值的数组（存放输入的内容）</span><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;输入的内容为：%s&quot;</span>, str);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>可以看到，成功接收到用户输入：</p>
+<p><img src="https://s2.loli.net/2022/06/17/RoEjaFVL4P9fWil.jpg" srcset="/img/loading.gif" lazyload alt="image-20220616141313060"></p>
+<p>当然除了能够扫描成字符串之外，我们也可以直接扫描为一个数字：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> a, b;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;a);   <span class="hljs-comment">//连续扫描两个int数字</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;b);   <span class="hljs-comment">//注意，如果不是数组类型，那么这里在填写变量时一定要在前面添加一个&amp;符号（至于为什么，下一章在指针小节中会详细介绍）这里的&amp;不是做与运算，而是取地址操作。</span><br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a + b = %d&quot;</span>, a + b);   <span class="hljs-comment">//扫描成功后，我们来计算a + b的结果</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>除了使用<code>scanf</code>之外，我们也可以使用字符串专用的函数来接受字符串类型的输入和输出：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> str[<span class="hljs-number">10</span>];<br>    gets(str);   <span class="hljs-comment">//gets也是接收控制台输入，然后将结果丢给str数组中</span><br>    <span class="hljs-built_in">puts</span>(str);   <span class="hljs-comment">//puts其实就是直接打印字符串到控制台</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>当然也有专门用于字符输入输出的函数：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> c = getchar();<br>    <span class="hljs-built_in">putchar</span>(c);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>由于我们目前还没有学习函数，所以这里稍微提及一下即可。</p>
+<h3 id="实战：回文串判断"><a href="#实战：回文串判断" class="headerlink" title="实战：回文串判断"></a>实战：回文串判断</h3><p>“回文串”是一个正读和反读都一样的字符串，请你实现一个C语言程序，判断用户输入的字符串（仅出现英文字符）是否为“回文”串。</p>
+<blockquote>
+<p>ABCBA    就是一个回文串，因为正读反读都是一样的</p>
+<p>ABCA    就不是一个回文串，因为反着读不一样</p>
+</blockquote>
+<h3 id="实战：字符串匹配KMP算法"><a href="#实战：字符串匹配KMP算法" class="headerlink" title="实战：字符串匹配KMP算法"></a>实战：字符串匹配KMP算法</h3><p>现在有两个字符串：</p>
+<blockquote>
+<p>str1 &#x3D; “abcdabbc”</p>
+<p>str2 &#x3D; “cda”</p>
+</blockquote>
+<p>现在请你设计一个C语言程序，判断第一个字符串中是否包含了第二个字符串，比如上面的例子中，很明显第一个字符串包含了第二个字符串。</p>
+<ul>
+<li>暴力解法</li>
+<li>KMP算法</li>
+</ul>
+<p>有关C语言的基础部分内容，我们就讲解到这里，从下一章开始，难度将会有一定的提升，所以请各位小伙伴务必将本章知识点梳理清楚，牢记心中。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Code/" class="category-chain-item">Code</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/C/">#C</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>C 语言基础</div>
+      <div>http://example.com/2023/03/01/C 语言基础/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Xudx</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年3月1日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/03/01/C%20%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/" title="C 语言高级特性">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">C 语言高级特性</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/03/01/%E4%BB%80%E4%B9%88%E6%98%AF%20C%20%E8%AF%AD%E8%A8%80/" title="什么是 C 语言">
+                        <span class="hidden-mobile">什么是 C 语言</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://fastly.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"c0b2054af3db35466953","clientSecret":"08da607737aecaef59715e123a092d5249d76a7a","repo":"cavdev.github.io","owner":"CavDev","admin":["CavDev"],"language":"zh-CN","labels":["Gitalk"],"perPage":12,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'bf3227c1748c4965f9f3c3fe81d3a0f5'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <style> .Link-text { color: #2196f3; }
+.Link-text:hover{ color: #1e88e5 }
+#Me span { background-image: linear-gradient(135deg,#f54ea2,#ff7676); -webkit-background-clip: text; color: transparent; } </style> <b><p id="Me">© 2023 <span>Xudx</span> </p></b> <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/" class="Link-text">Hexo</a> and Theme by <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid" class="Link-text">Fluid</a></p> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://fastly.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://fastly.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://fastly.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://fastly.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://fastly.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://fastly.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://fastly.jsdelivr.net/npm/anchor-js@4/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+      </script>
+    
+
+  <script  src="https://fastly.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="//fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="//fastly.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
