@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-01T17:37:40.619Z</updated>
+  <updated>2023-03-01T17:46:56.137Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2023/03/02/%E9%9F%B3%E4%B9%90%E7%95%8C%E9%9D%A2%E6%9B%B4%E6%96%B0/"/>
     <id>http://example.com/2023/03/02/%E9%9F%B3%E4%B9%90%E7%95%8C%E9%9D%A2%E6%9B%B4%E6%96%B0/</id>
     <published>2023-03-01T17:22:38.000Z</published>
-    <updated>2023-03-01T17:37:40.619Z</updated>
+    <updated>2023-03-01T17:46:56.137Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://images6.alphacoders.com/130/thumbbig-1301340.webp"></p><h1 id="音乐界面更新"><a href="#音乐界面更新" class="headerlink" title="音乐界面更新"></a>音乐界面更新</h1><p>废了几个小时把原来的音乐界面翻新了下</p><p><img src="https://s2.loli.net/2023/03/02/nojZFfu7kLNVtGK.png"></p><p>逻辑很简单，就是利用网易云的 内嵌播放器 iframe <strong>暴力输出</strong>到页面上，然后自己换写了下网页样式和排版，感觉看起来比之前好看多了，还加了分类</p><p>这么做的缺点也很多，网页因为 iframe 的加载慢一截，有时候还加载不出资源（貌似是网易云那边做了限制），当我把歌曲加完后我才知道有 <em>hexo-tag-aplayer</em> 这个东西可以拿来当播放器</p><p>编写页面没花多少时间，倒是挑歌曲转 iframe 后 Ctrl C + V 到 html 文件上废了太多时间</p><p>我会写点 js，但不会 DOM，如果会不知道还会不会像这样浪费时间</p><p>晒张丢人的源码</p><p><img src="https://s2.loli.net/2023/03/02/MUjnPsDb86Ep9J1.png"></p><p>😭😩😭</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://images6.alphacoders.com/130/thumbbig-1301340.webp"></p><h1 id="音乐界面更新"><a href="#音乐界面更新" class="headerlink" title="音乐界面更新"></a>音乐界面更新</h1><p>好久没有写过网页了，本来自己连 css 布局都不大懂</p><p>废了几个小时把原来的音乐界面翻新了下</p><p><img src="https://s2.loli.net/2023/03/02/nojZFfu7kLNVtGK.png"></p><p>逻辑很简单，就是利用网易云的 内嵌播放器 iframe <strong>暴力输出</strong>到页面上，然后自己换写了下网页样式和排版，感觉看起来比之前好看多了，还加了分类</p><p>这么做的缺点也很多，网页因为 iframe 的加载慢一截，有时候还加载不出资源（貌似是网易云那边做了限制），当我把歌曲加完后我才知道有 <em>hexo-tag-aplayer</em> 这个东西可以拿来当播放器</p><p>编写页面没花多少时间，倒是挑歌曲转 iframe 后 Ctrl C + V 到 html 文件上废了太多时间</p><p>我会写点 js，但不会 DOM，如果会不知道还会不会像这样浪费时间</p><p>晒张丢人的源码</p><p><img src="https://s2.loli.net/2023/03/02/MUjnPsDb86Ep9J1.png"></p><p>手机端布局竟然出奇地正常</p><p><img src="https://s2.loli.net/2023/03/02/MjUqH6L742DxyfC.jpg"></p><p>😭😩😭</p>]]></content>
     
     
     <summary type="html">累死我了 😩</summary>
