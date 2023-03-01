@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>记一个 Tkinter 做的计时器工具</title>
+    <link href="/2023/03/01/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%AE%A1%E6%97%B6%E5%99%A8%E5%B7%A5%E5%85%B7/"/>
+    <url>/2023/03/01/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%AE%A1%E6%97%B6%E5%99%A8%E5%B7%A5%E5%85%B7/</url>
+    
+    <content type="html"><![CDATA[<p><img src="https://images.alphacoders.com/130/thumbbig-1301788.webp"></p><h1 id="Reload-Timer"><a href="#Reload-Timer" class="headerlink" title="Reload Timer"></a>Reload Timer</h1><p>本来之前练习时做的，陆陆续续更新几个版本了</p><p>不得不说 Tkinter 做 GUI 好蛋疼啊，还是用 Qt 和 .Net 这类工具链做 GUI 的好</p><p>以后会用 Avalonia 重制</p><p>下面的控件不是 WinUI 3，其实是用了一个模仿 WinUI 3 的控件库：</p><p><a href="https://github.com/rdbende/Sun-Valley-ttk-theme">https://github.com/rdbende/Sun-Valley-ttk-theme</a></p><p>其实 Tkinter 的界面也没那么不堪入目嘛 🤤</p><p>Github: <a href="https://github.com/CavDev/Reload-Timer/">https://github.com/CavDev/Reload-Timer/</a></p><p><img src="https://s2.loli.net/2023/03/01/x4DABaYK8oMeQLg.png"></p><p><img src="https://s2.loli.net/2023/03/01/at7Qnmr9oZIvWTX.png"></p><p><img src="https://s2.loli.net/2023/03/01/pBfqovtiX9IMsSV.png"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>C 语言高级特性</title>
     <link href="/2023/03/01/C%20%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/"/>
     <url>/2023/03/01/C%20%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
