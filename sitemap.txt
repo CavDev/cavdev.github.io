@@ -7,7 +7,7 @@ http://example.com/2023/03/01/C%20%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%89%B9%
 http://example.com/2022/01/25/MD%E9%80%9F%E6%9F%A5%E6%96%87%E6%A1%A3/
 http://example.com/about/index.html
 http://example.com/
-http://example.com/tags/C/
 http://example.com/tags/MarkDown/
+http://example.com/tags/C/
 http://example.com/tags/%E8%AE%B0%E5%BD%95/
 http://example.com/categories/Code/
