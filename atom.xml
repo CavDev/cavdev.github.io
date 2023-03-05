@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-02T04:37:03.039Z</updated>
+  <updated>2023-03-05T14:37:12.948Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,12 +21,16 @@
     <link href="http://example.com/2023/03/02/%E9%9F%B3%E4%B9%90%E7%95%8C%E9%9D%A2%E6%9B%B4%E6%96%B0/"/>
     <id>http://example.com/2023/03/02/%E9%9F%B3%E4%B9%90%E7%95%8C%E9%9D%A2%E6%9B%B4%E6%96%B0/</id>
     <published>2023-03-01T17:22:38.000Z</published>
-    <updated>2023-03-02T04:37:03.039Z</updated>
+    <updated>2023-03-05T14:37:12.948Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://images6.alphacoders.com/130/thumbbig-1301340.webp"></p><h1 id="音乐界面更新"><a href="#音乐界面更新" class="headerlink" title="音乐界面更新"></a>音乐界面更新</h1><p>好久没有写过网页了，本来自己连 css 布局都不大懂</p><p>废了几个小时把原来的音乐界面翻新了下</p><p><img src="https://s2.loli.net/2023/03/02/nojZFfu7kLNVtGK.png"></p><p>逻辑很简单，就是利用网易云的 内嵌播放器 iframe <strong>暴力输出</strong>到页面上，然后自己换写了下网页样式和排版，感觉看起来比之前好看多了，还加了分类</p><p>这么做的缺点也很多，网页因为 iframe 的加载慢一截，有时候还加载不出资源（貌似是网易云那边做了限制），当我把歌曲加完后我才知道有 <em>hexo-tag-aplayer</em> 这个东西可以拿来当播放器</p><p>编写页面没花多少时间，倒是挑歌曲转 iframe 后 Ctrl C + V 到 html 文件上废了太多时间</p><p>我会写点 js，但不会 DOM，如果会不知道还会不会像这样浪费时间</p><p>晒张丢人的源码</p><p><img src="https://s2.loli.net/2023/03/02/MUjnPsDb86Ep9J1.png"></p><p>手机端布局竟然出奇地正常</p><p><img src="https://s2.loli.net/2023/03/02/MjUqH6L742DxyfC.jpg"></p><p>😭😩😭</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://images6.alphacoders.com/130/thumbbig-1301340.webp"></p><h1 id="音乐界面更新"><a href="#音乐界面更新" class="headerlink" title="音乐界面更新"></a>音乐界面更新</h1><p><img src="https://s2.loli.net/2023/03/02/nojZFfu7kLNVtGK.png"></p><p>![](<a href="https://s2.loli.net/2023/03/02/MUjnPsDb86Ep9J1.png%E6%89%8B%E6%9C%BA%E7%AB%AF%E5%B8%83%E5%B1%80%E5%87%BA%E5%A5%87%E6%AD%A3%E5%B8%B8">https://s2.loli.net/2023/03/02/MUjnPsDb86Ep9J1.png手机端布局出奇正常</a></p><p><img src="https://s2.loli.net/2023/03/02/MjUqH6L742DxyfC.jpg"></p>]]></content>
     
     
-    <summary type="html">😩</summary>
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://images6.alphacoders.com/130/thumbbig-1301340.webp&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;音乐界面更新&quot;&gt;&lt;a href=&quot;#音乐界面更新&quot; class=&quot;headerlink&quot; title=&quot;音乐界</summary>
+      
     
     
     
@@ -40,12 +44,16 @@
     <link href="http://example.com/2023/03/01/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%AE%A1%E6%97%B6%E5%99%A8%E5%B7%A5%E5%85%B7/"/>
     <id>http://example.com/2023/03/01/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%AE%A1%E6%97%B6%E5%99%A8%E5%B7%A5%E5%85%B7/</id>
     <published>2023-03-01T13:53:22.000Z</published>
-    <updated>2023-03-01T14:40:18.214Z</updated>
+    <updated>2023-03-05T14:37:40.619Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://images.alphacoders.com/130/thumbbig-1301788.webp"></p><h1 id="Reload-Timer"><a href="#Reload-Timer" class="headerlink" title="Reload Timer"></a>Reload Timer</h1><p>本来之前练习时做的，陆陆续续更新几个版本了</p><p>不得不说 Tkinter 做 GUI 好蛋疼啊，还是用 Qt 和 .Net 这类工具链做 GUI 的好</p><p>以后会用 Avalonia 重制</p><p>下面的控件不是 WinUI 3，其实是用了一个模仿 WinUI 3 的控件库：</p><p><a href="https://github.com/rdbende/Sun-Valley-ttk-theme">https://github.com/rdbende/Sun-Valley-ttk-theme</a></p><p>其实 Tkinter 的界面也没那么不堪入目嘛 🤤</p><p>Github: <a href="https://github.com/CavDev/Reload-Timer/">https://github.com/CavDev/Reload-Timer/</a></p><p><img src="https://s2.loli.net/2023/03/01/x4DABaYK8oMeQLg.png"></p><p><img src="https://s2.loli.net/2023/03/01/at7Qnmr9oZIvWTX.png"></p><p><img src="https://s2.loli.net/2023/03/01/pBfqovtiX9IMsSV.png"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://images.alphacoders.com/130/thumbbig-1301788.webp"></p><h1 id="Reload-Timer"><a href="#Reload-Timer" class="headerlink" title="Reload Timer"></a>Reload Timer</h1><p>本来之前练习时做的，陆陆续续更新几个版本了</p><p>Tkinter 做 GUI 真鸡巴蛋疼，还是用 Qt 和 .Net 这类工具链做 GUI 的好</p><p>以后会用 Avalonia 重制</p><p>下面的控件不是 WinUI 3，其实是用了一个模仿 WinUI 3 的控件库：</p><p><a href="https://github.com/rdbende/Sun-Valley-ttk-theme">https://github.com/rdbende/Sun-Valley-ttk-theme</a></p><p>其实 Tkinter 的界面也没那么不堪入目嘛 🤤</p><p>Github: <a href="https://github.com/CavDev/Reload-Timer/">https://github.com/CavDev/Reload-Timer/</a></p><p><img src="https://s2.loli.net/2023/03/01/x4DABaYK8oMeQLg.png"></p><p><img src="https://s2.loli.net/2023/03/01/at7Qnmr9oZIvWTX.png"></p><p><img src="https://s2.loli.net/2023/03/01/pBfqovtiX9IMsSV.png"></p>]]></content>
     
     
-    <summary type="html">🤤</summary>
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://images.alphacoders.com/130/thumbbig-1301788.webp&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Reload-Timer&quot;&gt;&lt;a href=&quot;#Reload-Timer&quot; class=&quot;headerlink&quot;</summary>
+      
     
     
     
