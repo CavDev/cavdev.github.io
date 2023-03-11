@@ -26,8 +26,7 @@ body {
     margin-top: 0.625em;
     margin-bottom: 1.875em;
 
-    margin-left: 18em;
-    margin-right: 18em;
+    /* 移动端去除边距 */
 
     text-align: left;
 

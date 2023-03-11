@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <!-- Use js to load css 使用 js 加载 css 文件 -->
+
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://fastly.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
     <title>Xudx' の Musics ( v.沢 )</title>
 </head>
 
@@ -12,112 +21,145 @@
     console.log("Xudx Fuck NCM")
     console.log("NCM's iframe == 💩")
 
-    function SetCwinHeight(){
-      var iframeid = document.getElementById("iframeid"); //iframe id
-      if (document.getElementById) {
-        if (iframeid && !window.opera) {
-          if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
-            iframeid.height = iframeid.contentDocument.body.offsetHeight + 50;
-          } else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
-            frameid.height = iframeid.Document.body.scrollHeight + 50;
-          }
-        }
-      }
+    function loadStyle(url) {
+      var link = document.createElement('link')
+      link.type = 'text/css'
+      link.rel = 'stylesheet'
+      link.href = url
+      var head = document.getElementsByTagName('head')[0]
+
+      head.appendChild(link)
     }
+
+    function Match(){
+            if (window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+              return true; 
+            }
+            else {
+              return false; 
+            }
+        }
+        
+    if( Match() ) { 
+    // Mobile
+        loadStyle('style-m.css')
+    }
+    else {
+    // PC
+      loadStyle('style.css')
+    }
+
 </script>
     <!-- function use example -->
     <!-- <iframe width="100%" id="iframeid" onload="Javascript:SetCwinHeight()" scrolling=no height="1000" frameborder="0" src="//music.163.com/outchain/player?type=2&id=1984977581&auto=1&height=66"></iframe> -->
 <body>
   <div id="i">
-    <div>
+    <div id="title">
       <p>置顶 📌</p>
     </div>
     <hr/> 
 
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1333335583&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=18861490&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1413487049&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=2003496923&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1989845851&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1879469323&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1407524668&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1898113522&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1496089152&auto=0&height=66"></iframe>
-
-    <div>
+    <meting-js
+    server="netease"
+    type="playlist"
+    id="8223365540"
+    list-max-height=13.75em
+    >
+    </meting-js>
+    
+    <div id="title">
       <p>Phonk 🔰</p>
     </div>
     <hr/>
 
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1886310528&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1974460387&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1959324681&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=2005737205&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1832336881&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1988628676&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1919684213&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1896253648&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1999489606&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1466072207&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1911420093&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1948643297&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1984977581&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1940024411&auto=0&height=66"></iframe>
+    <meting-js
+    server="netease"
+    type="playlist"
+    id="8227649052"
+    list-max-height=9em
+    >
+    </meting-js>
 
-    <div>
+    <meting-js
+    server="netease"
+    type="playlist"
+    id="7787611615"
+    list-folded="true"
+    >
+    </meting-js>
+
+
+    <div id="title">
       <p>Vaporwave 🌊</p>
     </div>
     <hr/>
 
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=33233921&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=33233925&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=33233922&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=532860839&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=408328190&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=470759614&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=35382688&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=471565832&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=446875404&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=448741213&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1362958839&auto=0&height=66"></iframe>
+    <meting-js
+    server="netease"
+    type="playlist"
+    id="8228469328"
+    
+    >
+    </meting-js>
 
-    <div>
+
+    <div id="title">
       <p>Post Punk 😭</p>
     </div>
     <hr/>
 
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1413481294&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1413487049&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1413481293&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=26710584&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1634119&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=19291860&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1901935881&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1405834468&auto=0&height=66"></iframe>
+    <meting-js
+    server="netease"
+    type="playlist"
+    id="8228517516"
+    list-folded="true"
+    >
+    </meting-js>
 
-    <div>
+    <meting-js
+    server="netease"
+    type="playlist"
+    id="7128419493"
+    list-folded="true"
+    >
+    </meting-js>
+
+
+    <div id="title">
       <p>其它 🤔</p>
     </div>
     <hr/>
 
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=346089&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1916700564&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1329665666&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=19203513&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=16957723&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=4981395&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1998380093&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=2003496380&auto=0&height=66"></iframe>
-    <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1409311773&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1964102918&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=26095964&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1480263657&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=501133800&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=33933850&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1488990367&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1896464544&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1341743704&auto=0&height=66"></iframe>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=1412473097&auto=0&height=66"></iframe> -->
+    <meting-js
+    server="netease"
+    type="album"
+    id="152330647"
+    list-folded="true"/>
+
+    <meting-js
+    server="netease"
+    type="playlist"
+    id="8228115110"
+    />
+        
   </div>
+
+  <div class="bottom" style="text-align: center;">
+    <b><p id="Me">© 2023 <span>Xudx</span> </p></b>
+
+    <a href="./old/">
+      <button id="link-btn">前往旧版</button>
+    </a>
+  </div>
+  
+  <!-- fixed -->
+
+  <meting-js
+  server="netease"
+  type="song"
+  fixed="true"
+  id="1496089152"
+  >
+  
 </body>
 </html>
