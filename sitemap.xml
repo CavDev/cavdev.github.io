@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/PlayMusics/old/index.html</loc>
-    
-    <lastmod>2023-03-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/about/index.html</loc>
     
     <lastmod>2023-03-06</lastmod>
@@ -92,14 +83,14 @@
 
   
   <url>
-    <loc>http://example.com/tags/C/</loc>
+    <loc>http://example.com/tags/MarkDown/</loc>
     <lastmod>2023-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/MarkDown/</loc>
+    <loc>http://example.com/tags/C/</loc>
     <lastmod>2023-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
