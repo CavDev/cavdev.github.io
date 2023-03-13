@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/PlayMusics/Old/index.html</loc>
-    
-    <lastmod>2023-03-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2023/03/01/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%AE%A1%E6%97%B6%E5%99%A8%E5%B7%A5%E5%85%B7/</loc>
     
     <lastmod>2023-03-05</lastmod>
