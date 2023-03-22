@@ -47,14 +47,15 @@
     <link href="http://example.com/2023/03/23/DVRST-YOUR-NAME/"/>
     <id>http://example.com/2023/03/23/DVRST-YOUR-NAME/</id>
     <published>2023-03-22T17:09:12.000Z</published>
-    <updated>2023-03-22T18:08:16.643Z</updated>
+    <updated>2023-03-22T18:41:00.251Z</updated>
     
-    <content type="html"><![CDATA[<p><video src="http://xhrwp.niutou.fun:2022/view.php/6a5862cd377e45e85a49d9502fba1688.mp4"  controls="controls" autoplay border="0" frameborder="no" framespacing="0" allowfullscreen="true"></video></p><p>作者：DVRST</p><p>音乐种类：Phonk</p><p>原地址：<a href="https://www.youtube.com/watch?v=W9GXqCBAZb0">https://www.youtube.com/watch?v=W9GXqCBAZb0</a></p>]]></content>
+    <content type="html"><![CDATA[<p><video src="http://xhrwp.niutou.fun:2022/view.php/6a5862cd377e45e85a49d9502fba1688.mp4"  controls="controls" autoplay ></video></p><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"theme":"#FADFA3","loop":true,"video":{"url":"http://xhrwp.niutou.fun:2022/view.php/6a5862cd377e45e85a49d9502fba1688.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script><p>作者：DVRST</p><p>音乐种类：Phonk</p><p>原地址：<a href="https://www.youtube.com/watch?v=W9GXqCBAZb0">https://www.youtube.com/watch?v=W9GXqCBAZb0</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;video src=&quot;http://xhrwp.niutou.fun:2022/view.php/6a5862cd377e45e85a49d9502fba1688.mp4&quot;  controls=&quot;controls&quot; autoplay border=&quot;0&quot; framebor</summary>
+    <summary type="html">&lt;p&gt;&lt;video src=&quot;http://xhrwp.niutou.fun:2022/view.php/6a5862cd377e45e85a49d9502fba1688.mp4&quot;  controls=&quot;controls&quot; autoplay &gt;&lt;/video&gt;&lt;/p&gt;
+&lt;div </summary>
       
     
     
