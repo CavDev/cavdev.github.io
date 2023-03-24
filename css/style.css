@@ -8204,8 +8204,14 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 .parallax-mirror {
   filter: brightness(1);
 }
+.top .title {
+  background-image: linear-gradient(135deg, #00fff0, #0083fe);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 .top .title font {
-  font-size: 1.15em;
+  font-size: 1.425em;
 }
 .top .title span {
   transition: 0.5s;
@@ -8216,12 +8222,14 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   -ms-transition: 0.5s;
 }
 .top .title:hover span:nth-child(1) {
-  margin-right: 10px;
+  margin-right: 25px;
+  font-size: 1.65em;
 }
 .top .title:hover span:nth-child(2) {
-  margin-left: 10px;
+  margin-left: 25px;
+  font-size: 1.65em;
 }
 .top .title:hover span {
   color: #fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 120px #fff, 0 0 160px #fff;
+  text-shadow: 6px 6px #f131f8, 5.75px 5.75px #f131f8, 5.5px 5.5px #f131f8, 5.25px 5.25px #f131f8, 5px 5px #f131f8, 4.75px 4.75px #f131f8, 4.5px 4.5px #f131f8, 4.25px 4.25px #f131f8, 4px 4px #f131f8, 3.75px 3.75px #f131f8, 3.5px 3.5px #f131f8, 3.25px 3.25px #f131f8, 3px 3px #f131f8, 2.75px 2.75px #f131f8, 2.5px 2.5px #f131f8, 2.25px 2.25px #f131f8, 2px 2px #f131f8, 1.75px 1.75px #f131f8, 1.5px 1.5px #f131f8, 1.25px 1.25px #f131f8, 1px 1px #f131f8, 0.75px 0.75px #f131f8, 0.5px 0.5px #f131f8, 0.25px 0.25px #f131f8;
 }
