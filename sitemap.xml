@@ -160,6 +160,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/C/</loc>
+    <lastmod>2023-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/Phonk/</loc>
     <lastmod>2023-03-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -168,13 +175,6 @@
   
   <url>
     <loc>http://example.com/tags/Chill/</loc>
-    <lastmod>2023-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/C/</loc>
     <lastmod>2023-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -204,14 +204,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E9%9F%B3%E4%B9%90/</loc>
+    <loc>http://example.com/categories/Code/</loc>
     <lastmod>2023-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Code/</loc>
+    <loc>http://example.com/categories/%E9%9F%B3%E4%B9%90/</loc>
     <lastmod>2023-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
