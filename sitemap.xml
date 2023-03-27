@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/03/27/your-name/</loc>
+    <loc>https://cavdev.github.io/about/index.html</loc>
     
     <lastmod>2023-03-27</lastmod>
     
@@ -11,52 +11,115 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/03/23/ALONE-IN-LORDAN/</loc>
+    <loc>https://cavdev.github.io/about_this_site/index.html</loc>
     
-    <lastmod>2023-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/03/23/DVRST-YOUR-NAME/</loc>
-    
-    <lastmod>2023-03-26</lastmod>
+    <lastmod>2023-03-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/about_this_site/index.html</loc>
+    <loc>https://cavdev.github.io/p/20f8c4c/</loc>
     
-    <lastmod>2023-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/about/index.html</loc>
-    
-    <lastmod>2023-03-24</lastmod>
+    <lastmod>2023-03-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/2022/12/29/10to11/</loc>
+    <loc>https://cavdev.github.io/p/23fa0644/</loc>
     
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://cavdev.github.io/p/9bd5df9d/</loc>
+    
+    <lastmod>2023-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/p/58c22091/</loc>
+    
+    <lastmod>2023-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/p/a422b655/</loc>
+    
+    <lastmod>2023-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/p/895633bb/</loc>
+    
+    <lastmod>2023-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/p/75fe9cb3/</loc>
+    
+    <lastmod>2023-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/p/70dd3f84/</loc>
+    
+    <lastmod>2023-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/p/ceee337a/</loc>
+    
+    <lastmod>2023-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/p/2941fad5/</loc>
+    
+    <lastmod>2023-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/p/308afba/</loc>
+    
+    <lastmod>2023-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/tags/index.html</loc>
     
     <lastmod>2023-03-18</lastmod>
     
@@ -65,72 +128,9 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://cavdev.github.io/categories/index.html</loc>
     
     <lastmod>2023-03-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/03/02/%E9%9F%B3%E4%B9%90%E7%95%8C%E9%9D%A2%E6%9B%B4%E6%96%B0/</loc>
-    
-    <lastmod>2023-03-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/03/01/C%20%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</loc>
-    
-    <lastmod>2023-03-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/03/01/C%20%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</loc>
-    
-    <lastmod>2023-03-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/03/01/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%AE%A1%E6%97%B6%E5%99%A8%E5%B7%A5%E5%85%B7/</loc>
-    
-    <lastmod>2023-03-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/06/29/Hexo%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8F%82%E6%95%B0/</loc>
-    
-    <lastmod>2023-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/03/01/%E4%BB%80%E4%B9%88%E6%98%AF%20C%20%E8%AF%AD%E8%A8%80/</loc>
-    
-    <lastmod>2023-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/01/25/MD%E9%80%9F%E6%9F%A5%E6%96%87%E6%A1%A3/</loc>
-    
-    <lastmod>2023-02-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -138,7 +138,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://cavdev.github.io/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -146,56 +146,56 @@
 
   
   <url>
-    <loc>http://example.com/tags/Phonk/</loc>
+    <loc>https://cavdev.github.io/tags/%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Chill/</loc>
+    <loc>https://cavdev.github.io/tags/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://cavdev.github.io/tags/Phonk/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://cavdev.github.io/tags/MarkDown/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/MarkDown/</loc>
+    <loc>https://cavdev.github.io/tags/Chill/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/C/</loc>
+    <loc>https://cavdev.github.io/tags/%E5%8A%A8%E6%BC%AB/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%8A%A8%E6%BC%AB/</loc>
+    <loc>https://cavdev.github.io/tags/C/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://cavdev.github.io/tags/%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -204,21 +204,21 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E9%9F%B3%E4%B9%90/</loc>
+    <loc>https://cavdev.github.io/categories/%E9%9F%B3%E4%B9%90/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Code/</loc>
+    <loc>https://cavdev.github.io/categories/Code/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%BD%B1%E8%A7%86/</loc>
+    <loc>https://cavdev.github.io/categories/%E5%BD%B1%E8%A7%86/</loc>
     <lastmod>2023-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
