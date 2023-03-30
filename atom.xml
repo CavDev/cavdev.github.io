@@ -213,9 +213,9 @@
     <link href="https://cavdev.github.io/p/308afba/"/>
     <id>https://cavdev.github.io/p/308afba/</id>
     <published>2022-12-29T15:06:21.000Z</published>
-    <updated>2023-03-27T17:11:38.201Z</updated>
+    <updated>2023-03-29T15:47:34.648Z</updated>
     
-    <content type="html"><![CDATA[<p>就在最近，我终于给我的设备升级了 Win11</p><p>网上铺天盖地基本都在攻击 Win11 ，我的设备升级后其实倒没网上说的出什么问题，除了漫威蜘蛛侠时爆显存蓝屏了一回（其实是硬件的锅），那时我有个写的笔记还没保存</p><p>其实在 <strong>22H2</strong> 版 Win11 镜像上已经很难绕过微软限制了，不管是断网删文件还是什么基本都绕不过检测，绕过了也会提醒你设备不达标，不提供支持</p><p>我基本找遍了网上的教程，最后发现还是github上一个叫<a href="https://github.com/AveYo/">AveYo</a>的大佬牛逼，通过 <strong>Bat 脚本</strong>的方式实现了绕过 Win11 检测</p><p>进入 <a href="https://github.com/AveYo/MediaCreationTool.bat/tree/main/bypass11">https://github.com/AveYo/MediaCreationTool.bat/tree/main/bypass11</a> </p><p>下载 Skip_TPM_Check_on_Dynamic_Update.cmd</p><p>运行脚本就好了，最好在之前先把杀毒软件关闭避免误报，运行之后再打开从官网下载的镜像文件（setup.exe）就可以按正常流程安装，升级会保留你之前安装的软件，不要管镜像内显示的系统，我显示的是 windows servers，按正常流程安装就好</p><p>最后建议安装 Explorer Patcher，可以在win11上使用 10 的磁贴菜单，并且磁贴和 10 之前设置的保持一致</p><p>（2023 更新：Explorer Patcher 现无法读取从 Microsoft Store 下载的应用，请参考此下链接）</p><p><a href="https://github.com/valinet/ExplorerPatcher/issues/1108">https://github.com/valinet/ExplorerPatcher/issues/1108</a></p>]]></content>
+    <content type="html"><![CDATA[<p>就在最近，我终于给我的设备升级了 Win11</p><p>网上铺天盖地基本都在攻击 Win11 ，我的设备升级后其实倒没网上说的出什么问题，除了漫威蜘蛛侠时爆显存蓝屏了一回（其实是硬件的锅），那时我有个写的笔记还没保存</p><p>其实在 <strong>22H2</strong> 版 Win11 镜像上已经很难绕过微软限制了，不管是断网删文件还是什么基本都绕不过检测，绕过了也会提醒你设备不达标，不提供支持</p><p>我基本找遍了网上的教程，最后发现还是github上一个叫<a href="https://github.com/AveYo/"> AveYo </a>的大佬牛逼，通过 <strong>Bat 脚本</strong>的方式实现了绕过 Win11 检测</p><p>进入 <a href="https://github.com/AveYo/MediaCreationTool.bat/tree/main/bypass11">https://github.com/AveYo/MediaCreationTool.bat/tree/main/bypass11</a> </p><p>下载 Skip_TPM_Check_on_Dynamic_Update.cmd</p><p>运行脚本就好了，最好在之前先把杀毒软件关闭避免误报，运行之后再打开从官网下载的镜像文件（setup.exe）就可以按正常流程安装，升级会保留你之前安装的软件，不要管镜像内显示的系统，我显示的是 windows servers，按正常流程安装就好</p><p>最后建议安装 Explorer Patcher，可以在win11上使用 10 的磁贴菜单，并且磁贴和 10 之前设置的保持一致</p><p>（2023 更新：Explorer Patcher 现无法读取从 Microsoft Store 下载的应用，请参考此下链接）</p><p><a href="https://github.com/valinet/ExplorerPatcher/issues/1108">https://github.com/valinet/ExplorerPatcher/issues/1108</a></p>]]></content>
     
     
       
