@@ -8196,13 +8196,14 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   -moz-opacity: 0.875;
 }
 #post.post,
+#page.post,
 #docs.post {
   opacity: 1;
   -webkit-opacity: 1;
   -moz-opacity: 1;
 }
 .parallax-mirror {
-  filter: brightness(0.85);
+  filter: brightness(0.9);
 }
 .top .title {
   background-image: linear-gradient(135deg, #00fff0, #0083fe);
