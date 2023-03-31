@@ -8202,7 +8202,7 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   -moz-opacity: 1;
 }
 .parallax-mirror {
-  filter: brightness(1);
+  filter: brightness(0.85);
 }
 .top .title {
   background-image: linear-gradient(135deg, #00fff0, #0083fe);
