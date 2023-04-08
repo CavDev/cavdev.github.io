@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cavdev.github.io/p/12301e24/</loc>
+    <loc>https://cavdev.github.io/p/87e8817d/</loc>
     
     <lastmod>2023-04-08</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/p/87e8817d/</loc>
+    <loc>https://cavdev.github.io/p/12301e24/</loc>
     
     <lastmod>2023-04-08</lastmod>
     
@@ -224,13 +224,6 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/tags/%E5%8A%A8%E6%BC%AB/</loc>
-    <lastmod>2023-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cavdev.github.io/tags/Hexo/</loc>
     <lastmod>2023-04-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -239,6 +232,13 @@
   
   <url>
     <loc>https://cavdev.github.io/tags/PDF/</loc>
+    <lastmod>2023-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/tags/%E5%8A%A8%E6%BC%AB/</loc>
     <lastmod>2023-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
