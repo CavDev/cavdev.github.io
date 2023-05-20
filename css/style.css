@@ -8189,11 +8189,40 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 [color-scheme='dark'] .aplayer .aplayer-notice {
   background-color: var(--color-site-bg) !important;
 }
-#l_main .post,
+.tagcloud {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.l_main post-wrapper {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
+.readmore {
+  visibility: hidden;
+}
+.list-h p {
+  visibility: hidden;
+}
+.list-h {
+  height: 5em;
+}
+.list-h a {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+#l_main .post {
+  opacity: 0.9;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
 #l_side .widget {
-  opacity: 0.875;
-  -webkit-opacity: 0.875;
-  -moz-opacity: 0.875;
+  opacity: 0.9;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
 }
 #post.post,
 #page.post,
