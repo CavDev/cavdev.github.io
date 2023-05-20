@@ -185,13 +185,6 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/tags/Phonk/</loc>
-    <lastmod>2023-05-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cavdev.github.io/tags/MarkDown/</loc>
     <lastmod>2023-05-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -199,7 +192,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/tags/%E5%8A%A8%E6%BC%AB/</loc>
+    <loc>https://cavdev.github.io/tags/Phonk/</loc>
     <lastmod>2023-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -214,6 +207,13 @@
   
   <url>
     <loc>https://cavdev.github.io/tags/PDF/</loc>
+    <lastmod>2023-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/tags/%E5%8A%A8%E6%BC%AB/</loc>
     <lastmod>2023-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
