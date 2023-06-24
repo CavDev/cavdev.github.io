@@ -8193,6 +8193,11 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   border-radius: 15px;
   -webkit-border-radius: 15px;
 }
+.l_header {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  margin-top: 0.5em;
+}
 .l_main post-wrapper {
   border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -8201,14 +8206,21 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   visibility: hidden;
 }
 .list-h p {
-  visibility: hidden;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
 }
 .list-h {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
   height: 5em;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
 }
 .list-h a {
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
+  border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
 }
 #l_main .post {
   opacity: 0.9;
