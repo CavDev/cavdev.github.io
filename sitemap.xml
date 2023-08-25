@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cavdev.github.io/gallery/index.html</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/about/index.html</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cavdev.github.io/p/23fa0644/</loc>
+    
+    <lastmod>2023-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cavdev.github.io/cw/index.html</loc>
     
     <lastmod>2023-06-24</lastmod>
@@ -11,52 +38,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/p/a422b655/</loc>
-    
-    <lastmod>2023-06-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/about/index.html</loc>
-    
-    <lastmod>2023-06-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/p/9bd5df9d/</loc>
-    
-    <lastmod>2023-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/p/23fa0644/</loc>
-    
-    <lastmod>2023-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://cavdev.github.io/p/12301e24/</loc>
-    
-    <lastmod>2023-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/p/70dd3f84/</loc>
     
     <lastmod>2023-05-20</lastmod>
     
@@ -74,54 +56,9 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/p/58c22091/</loc>
-    
-    <lastmod>2023-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/p/ceee337a/</loc>
-    
-    <lastmod>2023-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://cavdev.github.io/p/308afba/</loc>
     
     <lastmod>2023-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/gallery/index.html</loc>
-    
-    <lastmod>2023-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/about_this_site/index.html</loc>
-    
-    <lastmod>2023-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/p/5b15d63c/</loc>
-    
-    <lastmod>2023-04-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -166,7 +103,7 @@
 
   <url>
     <loc>https://cavdev.github.io/</loc>
-    <lastmod>2023-06-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -174,63 +111,42 @@
   
   <url>
     <loc>https://cavdev.github.io/tags/%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2023-06-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://cavdev.github.io/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/tags/C/</loc>
-    <lastmod>2023-06-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://cavdev.github.io/tags/MarkDown/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/tags/Phonk/</loc>
-    <lastmod>2023-06-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://cavdev.github.io/tags/Hexo/</loc>
-    <lastmod>2023-06-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://cavdev.github.io/tags/PDF/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/tags/%E5%8A%A8%E6%BC%AB/</loc>
-    <lastmod>2023-06-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://cavdev.github.io/tags/%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2023-06-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -239,21 +155,7 @@
   
   <url>
     <loc>https://cavdev.github.io/categories/Code/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/categories/%E9%9F%B3%E4%B9%90/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cavdev.github.io/categories/%E5%BD%B1%E8%A7%86/</loc>
-    <lastmod>2023-06-24</lastmod>
+    <lastmod>2023-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
