@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cavdev.github.io/gallery/index.html</loc>
+    <loc>https://sawaze.xyz/gallery/index.html</loc>
     
     <lastmod>2023-08-25</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/about/index.html</loc>
+    <loc>https://sawaze.xyz/about/index.html</loc>
     
     <lastmod>2023-08-25</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/p/23fa0644/</loc>
+    <loc>https://sawaze.xyz/p/23fa0644/</loc>
     
     <lastmod>2023-08-25</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/cw/index.html</loc>
+    <loc>https://sawaze.xyz/cw/index.html</loc>
     
     <lastmod>2023-06-24</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/p/12301e24/</loc>
+    <loc>https://sawaze.xyz/p/12301e24/</loc>
     
     <lastmod>2023-05-20</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/p/20f8c4c/</loc>
+    <loc>https://sawaze.xyz/p/20f8c4c/</loc>
     
     <lastmod>2023-05-20</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/p/308afba/</loc>
+    <loc>https://sawaze.xyz/p/308afba/</loc>
     
     <lastmod>2023-05-20</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/p/895633bb/</loc>
+    <loc>https://sawaze.xyz/p/895633bb/</loc>
     
     <lastmod>2023-03-27</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/p/75fe9cb3/</loc>
+    <loc>https://sawaze.xyz/p/75fe9cb3/</loc>
     
     <lastmod>2023-03-27</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/tags/index.html</loc>
+    <loc>https://sawaze.xyz/tags/index.html</loc>
     
     <lastmod>2023-03-18</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/categories/index.html</loc>
+    <loc>https://sawaze.xyz/categories/index.html</loc>
     
     <lastmod>2023-03-18</lastmod>
     
@@ -102,51 +102,51 @@
   
 
   <url>
-    <loc>https://cavdev.github.io/</loc>
-    <lastmod>2023-08-25</lastmod>
+    <loc>https://sawaze.xyz/</loc>
+    <lastmod>2023-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://cavdev.github.io/tags/%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2023-08-25</lastmod>
+    <loc>https://sawaze.xyz/tags/%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2023-08-25</lastmod>
+    <loc>https://sawaze.xyz/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/tags/MarkDown/</loc>
-    <lastmod>2023-08-25</lastmod>
+    <loc>https://sawaze.xyz/tags/MarkDown/</loc>
+    <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/tags/Hexo/</loc>
-    <lastmod>2023-08-25</lastmod>
+    <loc>https://sawaze.xyz/tags/%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/tags/PDF/</loc>
-    <lastmod>2023-08-25</lastmod>
+    <loc>https://sawaze.xyz/tags/Hexo/</loc>
+    <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cavdev.github.io/tags/%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2023-08-25</lastmod>
+    <loc>https://sawaze.xyz/tags/PDF/</loc>
+    <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -154,8 +154,8 @@
 
   
   <url>
-    <loc>https://cavdev.github.io/categories/Code/</loc>
-    <lastmod>2023-08-25</lastmod>
+    <loc>https://sawaze.xyz/categories/Code/</loc>
+    <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
