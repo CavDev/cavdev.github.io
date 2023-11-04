@@ -6,7 +6,7 @@
   <link href="https://sawaze.xyz/atom.xml" rel="self"/>
   
   <link href="https://sawaze.xyz/"/>
-  <updated>2023-11-04T01:47:45.311Z</updated>
+  <updated>2023-11-04T01:50:46.483Z</updated>
   <id>https://sawaze.xyz/</id>
   
   <author>
@@ -21,15 +21,12 @@
     <link href="https://sawaze.xyz/p/308afba/"/>
     <id>https://sawaze.xyz/p/308afba/</id>
     <published>2022-12-29T15:06:21.000Z</published>
-    <updated>2023-11-04T01:47:45.311Z</updated>
+    <updated>2023-11-04T01:50:46.483Z</updated>
     
     <content type="html"><![CDATA[<p>进入 <a href="https://github.com/AveYo/MediaCreationTool.bat/tree/main/bypass11">https://github.com/AveYo/MediaCreationTool.bat/tree/main/bypass11</a> </p><p>下载 Skip_TPM_Check_on_Dynamic_Update.cmd</p><p>运行脚本就好了，最好在之前先把杀毒软件关闭避免误报，运行之后再打开从官网下载的镜像文件（setup.exe）就可以按正常流程安装，升级会保留你之前安装的软件，不要管镜像内显示的系统版本，我显示的是 windows servers，按正常流程安装就好</p><p>最后建议安装 Explorer Patcher，可以在win11上使用 10 的磁贴菜单，并且磁贴和 10 之前设置的保持一致</p><p>（2023 更新：Explorer Patcher 现无法读取从 Microsoft Store 下载的应用，请参考此下链接）</p><p><a href="https://github.com/valinet/ExplorerPatcher/issues/1108">https://github.com/valinet/ExplorerPatcher/issues/1108</a></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;进入 &lt;a href=&quot;https://github.com/AveYo/MediaCreationTool.bat/tree/main/bypass11&quot;&gt;https://github.com/AveYo/MediaCreationTool.bat/tree/main/b</summary>
-      
+    <summary type="html">🤔</summary>
     
     
     
