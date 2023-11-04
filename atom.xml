@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>沢</title>
+  
+  
+  <link href="https://sawaze.xyz/atom.xml" rel="self"/>
+  
+  <link href="https://sawaze.xyz/"/>
+  <updated>2023-03-27T17:11:38.212Z</updated>
+  <id>https://sawaze.xyz/</id>
+  
+  <author>
+    <name>Sawaze</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 预定义参数</title>
+    <link href="https://sawaze.xyz/p/75fe9cb3/"/>
+    <id>https://sawaze.xyz/p/75fe9cb3/</id>
+    <published>2022-06-29T04:41:38.000Z</published>
+    <updated>2023-03-27T17:11:38.212Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="left">参数</th><th align="left">描述</th><th align="left">默认值</th></tr></thead><tbody><tr><td align="left"><code>layout</code></td><td align="left">布局</td><td align="left"><a href="https://hexo.io/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0"><code>config.default_layout</code></a></td></tr><tr><td align="left"><code>title</code></td><td align="left">标题</td><td align="left">文章的文件名</td></tr><tr><td align="left"><code>date</code></td><td align="left">建立日期</td><td align="left">文件建立日期</td></tr><tr><td align="left"><code>updated</code></td><td align="left">更新日期</td><td align="left">文件更新日期</td></tr><tr><td align="left"><code>comments</code></td><td align="left">开启文章的评论功能</td><td align="left">true</td></tr><tr><td align="left"><code>tags</code></td><td align="left">标签（不适用于分页）</td><td align="left"></td></tr><tr><td align="left"><code>categories</code></td><td align="left">分类（不适用于分页）</td><td align="left"></td></tr><tr><td align="left"><code>permalink</code></td><td align="left">覆盖文章网址</td><td align="left"></td></tr><tr><td align="left"><code>excerpt</code></td><td align="left">纯文本的页面摘录 使用 <a href="https://hexo.io/docs/tag-plugins#Post-Excerpt">此插件</a> 来格式化文本</td><td align="left"></td></tr><tr><td align="left"><code>disableNunjucks</code></td><td align="left">启用Nunjucks标签<code>&#123;&#123; &#125;&#125;</code>&#x2F;<code>&#123;% %&#125;</code>和<a href="https://hexo.io/docs/tag-plugins">标签插件</a>时禁止渲染。</td><td align="left"></td></tr><tr><td align="left"><code>lang</code></td><td align="left">设置语言以覆盖<a href="https://hexo.io/docs/internationalization#Path">自动检测</a></td><td align="left">Inherited from <code>_config.yml</code></td></tr></tbody></table>]]></content>
+    
+    
+    <summary type="html">速览 Hexo 的预定义参数</summary>
+    
+    
+    
+    <category term="Code" scheme="https://sawaze.xyz/categories/Code/"/>
+    
+    
+    <category term="MarkDown" scheme="https://sawaze.xyz/tags/MarkDown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MD 速查文档</title>
+    <link href="https://sawaze.xyz/p/895633bb/"/>
+    <id>https://sawaze.xyz/p/895633bb/</id>
+    <published>2022-01-25T12:05:08.000Z</published>
+    <updated>2023-03-27T17:11:38.213Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MD-速查文档"><a href="#MD-速查文档" class="headerlink" title="MD 速查文档"></a>MD 速查文档</h1><p>[TOC]</p><div class="story post-story"><h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="标题（Heading）"><a href="#标题（Heading）" class="headerlink" title="标题（Heading）"></a>标题（Heading）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># H1</span></span><br><span class="line"><span class="section">## H2</span></span><br><span class="line"><span class="section">### H3</span></span><br></pre></td></tr></table></figure><h3 id="加粗（Bold）"><a href="#加粗（Bold）" class="headerlink" title="加粗（Bold）"></a>加粗（Bold）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**bold text**</span></span><br></pre></td></tr></table></figure><h3 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*italicized text*</span></span><br></pre></td></tr></table></figure><h3 id="引用块（Blockquote）"><a href="#引用块（Blockquote）" class="headerlink" title="引用块（Blockquote）"></a>引用块（Blockquote）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; This is a blockquote</span></span><br></pre></td></tr></table></figure><h3 id="有序列表-（Ordered-List）"><a href="#有序列表-（Ordered-List）" class="headerlink" title="有序列表 （Ordered List）"></a>有序列表 （Ordered List）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> First</span><br><span class="line"><span class="bullet">2.</span> Second</span><br><span class="line"><span class="bullet">3.</span> Third</span><br></pre></td></tr></table></figure><h3 id="代码（Code）"><a href="#代码（Code）" class="headerlink" title="代码（Code）"></a>代码（Code）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`code`</span></span><br></pre></td></tr></table></figure><h3 id="分隔线（Horizontal-Rule）"><a href="#分隔线（Horizontal-Rule）" class="headerlink" title="分隔线（Horizontal Rule）"></a>分隔线（Horizontal Rule）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---</span><br></pre></td></tr></table></figure><h3 id="链接（Link）"><a href="#链接（Link）" class="headerlink" title="链接（Link）"></a>链接（Link）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">title</span>](<span class="link">https://www.example.com</span>)</span><br></pre></td></tr></table></figure><h3 id="图片（Image）"><a href="#图片（Image）" class="headerlink" title="图片（Image）"></a>图片（Image）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">alt text</span>](<span class="link">image.png</span>)</span><br></pre></td></tr></table></figure></div><div class="story post-story"><h2 id="扩展语法"><a href="#扩展语法" class="headerlink" title="扩展语法"></a>扩展语法</h2><h3 id="表格（Table）"><a href="#表格（Table）" class="headerlink" title="表格（Table）"></a>表格（Table）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax      | Description |</span><br><span class="line">| ----------- | ----------- |</span><br><span class="line">| Header      | Title       |</span><br><span class="line">| Paragraph   | Text        |</span><br></pre></td></tr></table></figure><table><thead><tr><th>Syntax</th><th>Description</th></tr></thead><tbody><tr><td>Header</td><td>Title</td></tr><tr><td>Paragraph</td><td>Text</td></tr></tbody></table><h3 id="代码块-（Fenced-Code-Block）"><a href="#代码块-（Fenced-Code-Block）" class="headerlink" title="代码块 （Fenced Code Block）"></a>代码块 （Fenced Code Block）</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="type">char</span> Hello[] = <span class="string">&quot;Hello World!&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, Hello);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="脚注（Footnote）"><a href="#脚注（Footnote）" class="headerlink" title="脚注（Footnote）"></a>脚注（Footnote）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Here&#x27;s a sentence with a footnote. [^1]</span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">This is the footnote.</span></span><br></pre></td></tr></table></figure><h3 id="标题编号（Heading-ID）"><a href="#标题编号（Heading-ID）" class="headerlink" title="标题编号（Heading ID）"></a>标题编号（Heading ID）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">### My Great Heading &#123;#custom-id&#125;</span></span><br></pre></td></tr></table></figure><h3 id="定义列表（Definition-list）"><a href="#定义列表（Definition-list）" class="headerlink" title="定义列表（Definition list）"></a>定义列表（Definition list）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">term</span><br><span class="line">: definition</span><br></pre></td></tr></table></figure><h3 id="删除线（Strikethrough）"><a href="#删除线（Strikethrough）" class="headerlink" title="删除线（Strikethrough）"></a>删除线（Strikethrough）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~Delete this~~</span><br></pre></td></tr></table></figure><h3 id="任务列表（Task-List）"><a href="#任务列表（Task-List）" class="headerlink" title="任务列表（Task List）"></a>任务列表（Task List）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [x] Write the press release</span><br><span class="line"><span class="bullet">-</span> [ ] Update the website</span><br><span class="line"><span class="bullet">-</span> [ ] Contact the media</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+    <summary type="html">速查 Markdown 的种种语法</summary>
+    
+    
+    
+    <category term="Code" scheme="https://sawaze.xyz/categories/Code/"/>
+    
+    
+    <category term="MarkDown" scheme="https://sawaze.xyz/tags/MarkDown/"/>
+    
+  </entry>
+  
+</feed>

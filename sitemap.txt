@@ -2,6 +2,10 @@ https://sawaze.xyz/about/index.html
 https://sawaze.xyz/about_this_site/index.html
 https://sawaze.xyz/gallery/index.html
 https://sawaze.xyz/cw/index.html
+https://sawaze.xyz/p/895633bb/
+https://sawaze.xyz/p/75fe9cb3/
 https://sawaze.xyz/tags/index.html
 https://sawaze.xyz/categories/index.html
 https://sawaze.xyz/
+https://sawaze.xyz/tags/MarkDown/
+https://sawaze.xyz/categories/Code/
