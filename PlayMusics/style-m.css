@@ -1,11 +1,21 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Source Han Serif";
+}
+
+@font-face {
+    font-family: "Source Han Serif";
+    src: url("https://gcore.jsdelivr.net/gh/CavDev/cdn_repo_jsdelivr/SourceHanSerifCN-Regular-1.otf");
 }
 
 body {
-    background-image: linear-gradient(135deg,#c2ffd8,#465efb);
-    padding: 1.25em;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: auto;
 }
 
 *::selection {
@@ -25,6 +35,8 @@ body {
 #i .aplayer {
     margin-top: 0.625em;
     margin-bottom: 1.875em;
+    margin-left: 1em;
+    margin-right: 1em;
 
     /* 移动端去除边距 */
 
@@ -47,14 +59,18 @@ body {
 #i #title {
     padding: 0.625em;
     margin: 0 auto;
+    margin-top: 1.75em;
     width: 11.875em;
     text-align: center;
 
     font-size: 20px;
     font-weight: bold;
+
+    color: #fefefe;
      
-    background-color: #ffffff;
     border-radius: 50px;
+    backdrop-filter: blur(16px);
+    filter: brightness(1.8);
 
     box-shadow:
     4.5px 4.5px 3.6px rgba(0, 0, 0, 0.042),
@@ -62,40 +78,19 @@ body {
     30.1px 30.1px 24.1px rgba(0, 0, 0, 0.078),
     100px 100px 80px rgba(0, 0, 0, 0.12)
     ;
-
-    color: gray;
 }
 
-#link-btn {
-    border: none;
+.bottom
+{
+    background-color: #0a53db;
+    
+    border-radius: 8px;
 
-    padding: 0.4em;
+    width: 5em;
+
     margin: 0 auto;
-    width: 10em;
-    text-align: center;
-    display: block;
 
-    font-size: 16px;
-    font-weight: lighter;
-     
-    background-color: #f1f1f1;
-    border-radius: 15px;
-
-    box-shadow:
-    4.5px 4.5px 3.6px rgba(0, 0, 0, 0.042),
-    12.5px 12.5px 10px rgba(0, 0, 0, 0.06),
-    30.1px 30.1px 24.1px rgba(0, 0, 0, 0.078),
-    100px 100px 80px rgba(0, 0, 0, 0.12)
-    ;
-
-    color: gray;
-}
-
-#link-btn:hover {
-    background-color: #e2e2e2;
-    font-weight: normal;
-
-    cursor: pointer;
+    
 }
 
 .bottom p {
@@ -122,4 +117,47 @@ body {
 .bottom span {
     font-weight: bold;
     color: #ffc9c9;
+}
+
+video {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: -11
+}
+
+#i .aplayer-title
+{
+    font-weight: bold;
+}
+
+#i .aplayer-info
+{
+    height: 12em;
+    backdrop-filter: blur(16px);
+    
+}
+
+#i .aplayer-lrc
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: 6em;
+}
+
+#i .aplayer-lrc-current
+{
+    margin-top: 10em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#i .aplayer-list
+{
+    background-color: rgb(236, 236, 236);
+    
 }
