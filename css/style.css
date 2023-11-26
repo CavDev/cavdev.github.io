@@ -254,8 +254,8 @@ th {
   padding: 0;
 }
 @font-face {
-  font-family: 'Monaco';
-  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/Monaco/Monaco.ttf");
+  font-family: 'Source Code Pro';
+  src: url("https://gcore.jsdelivr.net/gh/CavDev/cdn_repo_jsdelivr/SourceCodePro-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -600,7 +600,7 @@ article#tag .all-tags ul li span:before {
   overflow: auto;
   background: var(--color-codeblock);
   font-size: 0.8125rem;
-  font-family: Consolas, enlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Source Code Pro, monospace, courier, sans-serif;
   border: 1px solid #ffebcb;
   padding: 16px;
   border-radius: 4px;
@@ -620,7 +620,7 @@ article#tag .all-tags ul li span:before {
   color: rgba(68,68,68,0.9);
 }
 .article code {
-  font-family: Consolas, enlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Source Code Pro, monospace, courier, sans-serif;
 }
 .article code:not([class]) {
   word-break: break-all;
@@ -5444,7 +5444,7 @@ p.p.logo {
 }
 span.p.code,
 p.p.code {
-  font-family: Consolas, enlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Source Code Pro, monospace, courier, sans-serif;
 }
 span.p.left,
 p.p.left {
@@ -5929,7 +5929,7 @@ div.timenode:hover .meta:after {
   -ms-transform: scale(1);
 }
 .article mjx-container {
-  font-family: Consolas, enlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Source Code Pro, monospace, courier, sans-serif;
   padding: 16px 8px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -6388,7 +6388,7 @@ div.timenode:hover .meta:after {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-appearance: none;
-  font-family: Menlo, Consolas, enlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Menlo, Source Code Pro, monospace, courier, sans-serif;
   font-size: 11px;
   font-weight: bold;
   padding: 4px 8px;
@@ -6734,7 +6734,7 @@ pre {
   display: block;
   background: var(--color-block);
   font-size: 0.8125rem;
-  font-family: Consolas, enlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Source Code Pro, monospace, courier, sans-serif;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   line-height: 1.5;
@@ -6905,7 +6905,7 @@ pre {
   border-radius: 4px;
   -webkit-border-radius: 4px;
   color: var(--color-text);
-  font-family: Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: Source Han Serif CN, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
 }
 .aplayer .aplayer-list {
   text-align: left;
