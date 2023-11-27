@@ -8194,9 +8194,16 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   -webkit-border-radius: 15px;
 }
 .l_header {
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  margin-top: 0.5em;
+  backdrop-filter: blur(16px) !important;
+  background-color: rgba(240,240,240,0.5) !important;
+}
+@media screen and (max-width: 2048px) {
+  .l_header {
+    left: 0 !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    max-width: 100% !important;
+  }
 }
 .l_main post-wrapper {
   border-radius: 30px;
