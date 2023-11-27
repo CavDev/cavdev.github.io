@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>沢</title>
+  <title>sawaze&#39;s Blog</title>
   
   
   <link href="https://sawaze.xyz/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://sawaze.xyz/</id>
   
   <author>
-    <name>Sawaze</name>
+    <name>sawaze</name>
     
   </author>
   
