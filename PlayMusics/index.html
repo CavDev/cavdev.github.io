@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-    <!-- 使用 js 加载 css 文件 -->
-
     <!-- require APlayer -->
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
     <script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
@@ -39,7 +36,8 @@
         
     if( Match() ) { 
     // Mobile
-        loadStyle('style-m.css')
+        loadStyle('style.css')
+        loadStyle('resize.css')
     }
     else {
     // PC
@@ -73,12 +71,12 @@
   
   <!-- fixed -->
 
-  <meting-js
+  <!-- <meting-js
   server="netease"
   type="song"
   fixed="true"
   id="27646199"
-  >
+  > -->
   
 </body>
 </html>

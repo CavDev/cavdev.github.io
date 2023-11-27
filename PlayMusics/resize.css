@@ -1,0 +1,12 @@
+#i .aplayer {
+    margin-top: 0.625em;
+    margin-bottom: 1.875em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    /* 移动端重置边距 */
+
+    text-align: left;
+
+    border-radius: 0.625em;
+}

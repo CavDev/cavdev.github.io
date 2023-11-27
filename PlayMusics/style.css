@@ -33,15 +33,18 @@ body {
 }
 
 #i .aplayer {
+    background-color: rgba(252, 252, 252, 0.5);
     margin-top: 0.625em;
     margin-bottom: 1.875em;
 
-    margin-left: 18em;
-    margin-right: 18em;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    min-width: 12em;
 
     text-align: left;
 
-    border-radius: 0.625em;
+    border-radius: 1em;
 }
 
 #i hr {
@@ -58,8 +61,8 @@ body {
 #i #title {
     padding: 0.625em;
     margin: 0 auto;
-    margin-top: 1.75em;
-    width: 11.875em;
+    margin-top: 1.8em;
+    width: 12em;
     text-align: center;
 
     font-size: 20px;
@@ -69,7 +72,9 @@ body {
      
     border-radius: 50px;
     backdrop-filter: blur(16px);
-    filter: brightness(1.8);
+    filter: brightness(1.5);
+    background-color: rgba(151, 151, 151, 0.5);
+    
 
     box-shadow:
     4.5px 4.5px 3.6px rgba(0, 0, 0, 0.042),
@@ -81,13 +86,10 @@ body {
 
 .bottom
 {
-    background-color: #0a53db;
-    
-    border-radius: 8px;
-
-    width: 5em;
+    font-size: 16px;
 
     margin: 0 auto;
+    margin-top: 5em;
 }
 
 .bottom p {
@@ -98,7 +100,7 @@ body {
     font-size: 1em;
     font-weight: lighter;
 
-    color: #f0f0f0;
+    color: #bdbdbd;
     text-align: center;
 }
 
@@ -113,7 +115,7 @@ body {
 
 .bottom span {
     font-weight: bold;
-    color: #ffc9c9;
+    color: rgb(255, 255, 255);
 }
 
 video {
@@ -136,18 +138,48 @@ video {
 {
     height: 12em;
     backdrop-filter: blur(16px);
-    
 }
 
 #i .aplayer-lrc
 {
+    z-index: -10;
     padding-top: 1em;
     padding-bottom: 1em;
     height: 6em;
 }
 
+.aplayer .aplayer-lrc:before {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    content: "";
+    background: transparent;
+  }
+.aplayer .aplayer-lrc:after {
+    bottom: 0;
+    height: 33%;
+    background: transparent
+}
+
+#i .aplayer-lrc-contents p
+{
+    color: rgb(248, 248, 248);
+}
+
+#i .aplayer-music .aplayer-title
+{
+    background: linear-gradient(135deg,#ff75c3,#ffa647,#ffe83f,#9fff5b,#70e2ff,#cd93ff);
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
 #i .aplayer-lrc-current
 {
+    
     margin-top: 10em;
     font-size: 1em;
     font-weight: bold;
@@ -155,6 +187,37 @@ video {
 
 #i .aplayer-list
 {
-    background-color: rgb(236, 236, 236);
-    
+    backdrop-filter: blur(8px);
+    background-color: rgba(79, 23, 209, 0.225)
+}
+
+#i .aplayer-list .aplayer-list-light
+{
+    font-weight: bold;
+
+    color: dimgray;
+    backdrop-filter: blur(8px);
+    background-color: rgba(58, 58, 58, 0.2); 
+}
+
+#i .aplayer-list .aplayer-list-index
+{
+    color: #f0f0f0;
+}
+
+#i .aplayer-list .aplayer-list-title
+{
+    color: rgb(255, 241, 241);
+}
+
+#i .aplayer-list .aplayer-list-author
+{
+    color: rgb(206, 206, 206);
+}
+.aplayer .aplayer-list ol li:hover {
+    background-color: rgb(94, 94, 94, 0.45);
+}
+
+.aplayer .aplayer-list ol li {
+    border-top: 0px;
 }
