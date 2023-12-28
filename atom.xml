@@ -6,7 +6,7 @@
   <link href="https://sawaze.xyz/atom.xml" rel="self"/>
   
   <link href="https://sawaze.xyz/"/>
-  <updated>2023-03-27T17:11:38.212Z</updated>
+  <updated>2023-12-28T09:19:07.545Z</updated>
   <id>https://sawaze.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://sawaze.xyz/p/75fe9cb3/"/>
     <id>https://sawaze.xyz/p/75fe9cb3/</id>
     <published>2022-06-29T04:41:38.000Z</published>
-    <updated>2023-03-27T17:11:38.212Z</updated>
+    <updated>2023-12-28T09:19:07.545Z</updated>
     
     <content type="html"><![CDATA[<table><thead><tr><th align="left">参数</th><th align="left">描述</th><th align="left">默认值</th></tr></thead><tbody><tr><td align="left"><code>layout</code></td><td align="left">布局</td><td align="left"><a href="https://hexo.io/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0"><code>config.default_layout</code></a></td></tr><tr><td align="left"><code>title</code></td><td align="left">标题</td><td align="left">文章的文件名</td></tr><tr><td align="left"><code>date</code></td><td align="left">建立日期</td><td align="left">文件建立日期</td></tr><tr><td align="left"><code>updated</code></td><td align="left">更新日期</td><td align="left">文件更新日期</td></tr><tr><td align="left"><code>comments</code></td><td align="left">开启文章的评论功能</td><td align="left">true</td></tr><tr><td align="left"><code>tags</code></td><td align="left">标签（不适用于分页）</td><td align="left"></td></tr><tr><td align="left"><code>categories</code></td><td align="left">分类（不适用于分页）</td><td align="left"></td></tr><tr><td align="left"><code>permalink</code></td><td align="left">覆盖文章网址</td><td align="left"></td></tr><tr><td align="left"><code>excerpt</code></td><td align="left">纯文本的页面摘录 使用 <a href="https://hexo.io/docs/tag-plugins#Post-Excerpt">此插件</a> 来格式化文本</td><td align="left"></td></tr><tr><td align="left"><code>disableNunjucks</code></td><td align="left">启用Nunjucks标签<code>&#123;&#123; &#125;&#125;</code>&#x2F;<code>&#123;% %&#125;</code>和<a href="https://hexo.io/docs/tag-plugins">标签插件</a>时禁止渲染。</td><td align="left"></td></tr><tr><td align="left"><code>lang</code></td><td align="left">设置语言以覆盖<a href="https://hexo.io/docs/internationalization#Path">自动检测</a></td><td align="left">Inherited from <code>_config.yml</code></td></tr></tbody></table>]]></content>
     
