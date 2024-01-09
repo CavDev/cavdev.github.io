@@ -7885,7 +7885,7 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   :root:not([color-scheme]) svg.iconfont,
   :root:not([color-scheme]) img,
   :root:not([color-scheme]) .lazyload {
-    filter: brightness(60%) !important;
+    filter: brightness(80%) !important;
   }
   :root:not([color-scheme]) .widget.blogger .content .social-wrapper a.social:hover {
     background: var(--color-card);
@@ -7989,7 +7989,7 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 [color-scheme='dark'] svg.iconfont,
 [color-scheme='dark'] img,
 [color-scheme='dark'] .lazyload {
-  filter: brightness(60%) !important;
+  filter: brightness(80%) !important;
 }
 [color-scheme='dark'] .widget.blogger .content .social-wrapper a.social:hover {
   background: var(--color-card);
@@ -8128,17 +8128,16 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   -webkit-background-clip: text;
   -webkit-background-size: 200% 100%;
 }
+#next {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
 #l_main .post {
-  opacity: 0.9;
-  -webkit-opacity: 0.9;
-  -moz-opacity: 0.9;
   border-radius: 30px;
   -webkit-border-radius: 30px;
 }
 #l_side .widget {
-  opacity: 0.9;
-  -webkit-opacity: 0.9;
-  -moz-opacity: 0.9;
   border-radius: 20px;
   -webkit-border-radius: 20px;
 }
